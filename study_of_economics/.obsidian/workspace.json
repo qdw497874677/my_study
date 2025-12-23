@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "04a602eb4001180a",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b7e891a326eb8a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "47df7be6ac3ba686",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "项目/经济学/初始文档.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "初始文档"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "707d3faedb3f651e",
+    "type": "split",
+    "children": [
+      {
+        "id": "ef6da586c78d0e27",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e3504e1c3750b51",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "695d46995e225945",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "afdd8129e1d66f98",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "756bd6fc808d66a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "7c045d749c0b2010",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3e7ec2fdbe00e4c6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "项目/经济学/初始文档.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "初始文档 的反向链接列表"
+            }
+          },
+          {
+            "id": "570c51a8b82a48b1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "项目/经济学/初始文档.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "初始文档 的出链列表"
+            }
+          },
+          {
+            "id": "70f2041736847bb8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "4df4be0a87eb991b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "项目/经济学/初始文档.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "初始文档 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false
+    }
+  },
+  "active": "47df7be6ac3ba686",
+  "lastOpenFiles": [
+    "项目/经济学/项目信息.md",
+    "项目/经济学/知识卡片/01. 如何正确评估机会成本，它真的靠谱吗？.md",
+    "项目/经济学/知识卡片/02. 沉没成本就是过去成本，为什么这么难忽略？.md",
+    "项目/经济学/初始文档.md",
+    "CLAUDE.md",
+    "项目/经济学/输出卡片",
+    "项目/经济学/知识卡片",
+    "项目/经济学",
+    "_系统/写作Agent.md",
+    "_系统/成稿Agent.md",
+    "_系统/规范/输出卡片组织.md",
+    "_系统/规范/知识卡片组织.md",
+    "_系统/规范/格式检查.md",
+    "_系统/规范/核心规范.md",
+    "_系统/规范/断点续传.md",
+    "_系统/规范/双链系统.md",
+    "_系统/规范/Canvas白板.md",
+    "_系统/规范",
+    "_系统/结构Agent.md",
+    "_系统/塔斯海的高质样例/追问本质样例-我们的上一秒去哪了(节选).md",
+    "_系统/塔斯海的高质样例/运动员会如何逃避药检？.md",
+    "_系统/塔斯海的高质样例/显示器线DP、HDMI、VGA传输画面的最大区别是什么?.md",
+    "_系统/塔斯海的高质样例/我们的上一秒去哪了.md",
+    "_系统/塔斯海的高质样例/你根本不知道热管有多强.md",
+    "_系统/塔斯海的高质样例/人类的体温为什么是36度而不是26度.md",
+    "_系统/塔斯海的高质样例/AI 突变的底层逻辑.md",
+    "_系统/塔斯海的高质样例",
+    "_系统/学习Agent.md",
+    "项目/Claude和GPT的区别/输出卡片/01-编程能力差异的技术根源/02-不是代码越多越好，数据质量的秘密.md",
+    "项目/Claude和GPT的区别/输出卡片/01-编程能力差异的技术根源/01-架构相同，差异在哪？训练的五个关键环节.md",
+    "项目/Claude和GPT的区别/输出卡片/02-实际使用中的反转/01-理论强但实际弱？Claude的\"想太多\"问题.md",
+    "项目/Claude和GPT的区别/输出卡片/01-编程能力差异的技术根源",
+    "项目/Claude和GPT的区别/输出卡片/02-实际使用中的反转",
+    "项目/Claude和GPT的区别/输出卡片",
+    "项目/Claude和GPT的区别/知识卡片",
+    "项目/Claude和GPT的区别/内容白板.canvas",
+    "项目/Claude和GPT的区别"
+  ]
+}
