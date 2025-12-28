@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "ada4f30be0fce5ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee8340e2ff5eb4ce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2a602923eece7118",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "项目/大模型原理全面学习/项目信息.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "项目信息"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d7e4ce9f62aa0330",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "27002641fcfd4c9f",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false
+          },
+          "icon": "lucide-folder-closed",
+          "title": "文件列表"
+        }
+      },
+      {
+        "id": "c98a21d6dfa3ee6f",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "搜索"
+        }
+      },
+      {
+        "id": "fc648375217c0537",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "标签"
+        }
+      },
+      {
+        "id": "3828ccc941d16012",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-archive",
+          "title": "添加笔记属性"
+        }
+      },
+      {
+        "id": "4f486c191685bb89",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "书签"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "7404782ff9d389ab",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "69248a76d4d73e89",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "项目/大模型原理全面学习/初始文档.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": true,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "反向链接"
+        }
+      },
+      {
+        "id": "ea6ad87c34c0fa98",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "项目/大模型原理全面学习/初始文档.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "出链"
+        }
+      },
+      {
+        "id": "fb03027c7d147be3",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "项目/大模型原理全面学习/项目信息.md",
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "大纲"
+        }
+      }
+    ],
+    "currentTab": 2
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "2a602923eece7118",
+  "lastOpenFiles": [
+    "项目/大模型原理全面学习/初始文档.md",
+    "项目/大模型原理全面学习/输出卡片/02-深度学习的崛起/03-自动特征学习的革命：从人工找规律到机器发现规律.md",
+    "项目/大模型原理全面学习/输出卡片/02-深度学习的崛起/02-三个年份改变历史：深度学习是如何崛起的？.md",
+    "项目/大模型原理全面学习/输出卡片/02-深度学习的崛起/01-传统机器学习的天花板：为什么一定会遇到瓶颈？.md",
+    "项目/大模型原理全面学习/输出卡片/01-机器学习的规则本质/01-AI的黑箱到底有多黑？.md",
+    "/项目/大模型原理全面学习/输出卡片/02-深度学习的崛起/03-自动特征学习的革命：从人工找规律到机器发现规律.md",
+    "/项目/大模型原理全面学习/输出卡片/02-深度学习的崛起/02-三个年份改变历史：深度学习是如何崛起的？.md",
+    "/项目/大模型原理全面学习/输出卡片/02-深度学习的崛起/01-传统机器学习的天花板：为什么一定会遇到瓶颈？.md",
+    "/项目/大模型原理全面学习/输出卡片/02-深度学习的崛起",
+    "项目/大模型原理全面学习/输出卡片/02-深度学习的崛起",
+    "/项目/大模型原理全面学习/输出卡片",
+    "/项目/大模型原理全面学习",
+    "/项目",
+    "_系统/结构Agent.md",
+    "_系统/学习Agent.md",
+    "项目/大模型原理全面学习/知识卡片/02. 为什么需要深度学习？传统机器学习的局限性和深度学习的突破.md",
+    "项目/大模型原理全面学习/知识卡片/03. 什么是特征？深度学习为什么不需要特征工程？.md",
+    "项目/大模型原理全面学习/输出卡片/01-机器学习的规则本质/03-当规则超越人类理解：机遇、挑战与未来思考.md",
+    "项目/大模型原理全面学习/输出卡片/01-机器学习的规则本质/02-复杂规则的层级：从简单到黑箱的可理解性阶梯.md",
+    "项目/大模型原理全面学习/项目信息.md",
+    "项目/Claude和GPT的区别/项目信息.md",
+    "项目/Claude和GPT的区别/输出卡片/01-编程能力差异的技术根源/02-不是代码越多越好，数据质量的秘密.md",
+    "项目/Claude和GPT的区别/输出卡片/01-编程能力差异的技术根源/01-架构相同，差异在哪？训练的五个关键环节.md",
+    "项目/Claude和GPT的区别/知识卡片/02. Claude建构强但debug弱？理论优势在实际场景的反转.md",
+    "项目/Claude和GPT的区别/知识卡片/01. 同样是Transformer架构，为什么Claude编程能力更强？.md",
+    "项目/Claude和GPT的区别/最终成稿-Claude和GPT的区别.md",
+    "项目/Claude和GPT的区别/初始文档.md",
+    "项目/Claude和GPT的区别/内容白板.canvas",
+    "_系统/规范/输出卡片组织.md",
+    "_系统/规范/知识卡片组织.md",
+    "_系统/规范/格式检查.md",
+    "_系统/规范/核心规范.md",
+    "项目/大模型原理全面学习/输出卡片/01-机器学习的规则本质",
+    "项目/Claude和GPT的区别/输出卡片/02-实际使用中的反转",
+    "项目/Claude和GPT的区别/输出卡片/01-编程能力差异的技术根源",
+    "项目/大模型原理全面学习/输出卡片",
+    "项目/大模型原理全面学习/知识卡片"
+  ]
+}
