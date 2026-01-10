@@ -29,46 +29,600 @@
 
 ## 主流工具介绍
 
-### 1. IDE 集成型工具
+### 1. 编辑补全助手
 
 #### GitHub Copilot
-- **定位**：代码补全助手
-- **优势**：与 GitHub 生态深度集成、多语言支持、上下文感知
-- **适用场景**：日常编码、函数补全、代码建议
-- **局限性**：无自主性、需要明确引导
+- **定位**：GitHub 官方代码补全助手
+- **优势**：
+  - 与 GitHub 生态深度集成
+  - 支持 100+ 种编程语言
+  - 上下文感知能力强
+  - 实时代码建议
+- **适用场景**：日常编码、函数补全、代码片段生成
+- **局限性**：无自主性、需要明确引导、无多文件理解
+- **定价**：$10/月（个人）、$19/月（企业）
+
+#### GitHub Copilot X
+- **定位**：Copilot 的升级版（GPT-4 驱动）
+- **优势**：
+  - 更强大的上下文理解
+  - 支持对话式交互
+  - 集成代码解释和文档生成
+- **适用场景**：复杂代码生成、代码解释、文档撰写
+- **局限性**：成本更高、仍需明确引导
+- **定价**：$20/月
+
+#### Tabnine
+- **定位**：多模型支持的代码补全助手
+- **优势**：
+  - 支持私有化部署
+  - 可选本地模型（隐私友好）
+  - 支持多种 AI 模型（GPT-4, Claude, 自研）
+- **适用场景**：需要隐私保护的企业、敏感项目开发
+- **局限性**：上下文窗口较小、代码质量参差
+- **定价**：$12/月（个人）、企业定制
+
+#### Codeium（补全模式）
+- **定位**：免费且无限制的代码补全助手
+- **优势**：
+  - **完全免费**，无生成额度限制
+  - 支持 70+ 种编程语言
+  - 轻量级，不拖慢编辑器
+  - 支持主流 IDE（VSCode, JetBrains, Vim 等）
+- **适用场景**：预算敏感的开发者、日常编码补全
+- **局限性**：上下文理解较浅、无自主任务执行
+- **定价**：**免费**（个人和商业使用）
+
+#### Amazon CodeWhisperer
+- **定位**：AWS 生态的代码补全助手
+- **优势**：
+  - 深度集成 AWS 服务
+  - 支持 AWS 特定代码模式
+  - 免费版可用
+- **适用场景**：AWS 项目开发、云服务集成
+- **局限性**：仅适合 AWS 生态、通用性较弱
+- **定价**：免费（个人）、专业版 $19/月
+
+---
+
+### 2. 原生 IDE (AI Native IDE)
 
 #### Cursor
-- **定位**：AI 原生 IDE
-- **优势**：多文件编辑、自主代码库理解、Composer 模式
-- **适用场景**：新功能开发、重构、多文件修改
-- **局限性**：学习成本、迁移成本
+- **定位**：基于 VS Code 的 AI 原生 IDE
+- **优势**：
+  - **多文件编辑**：同时修改多个文件，保持代码一致性
+  - **自主代码库理解**：快速理解整个项目结构
+  - **Composer 模式**：长任务规划、分步执行
+  - **Tab 切换模式**：Build（编码）、Plan（规划）
+  - **内置 Copilot 集成**：兼具补全和自主执行
+- **适用场景**：新功能开发、大规模重构、多文件修改
+- **局限性**：学习成本、迁移成本、$20/月
+- **定价**：$20/月（Pro）、$40/月（Business）
+
+> **Cursor vs 传统 IDE 的核心差异**：
+> - 传统 IDE："我敲代码，IDE 帮我补全"
+> - Cursor："我描述意图，Cursor 自主编程"
+
+#### Windsurf（Codeium IDE）
+- **定位**：Codeium 推出的 AI 原生 IDE
+- **优势**：
+  - **更便宜**：$15/月（比 Cursor 便宜 $5）
+  - **更好的企业合规**：符合 GDPR、SOC2 等安全标准
+  - **深度代码库理解**：能理解项目架构和内部约定
+  - **免费集成**：内置 Codeium 补全（无额外费用）
+- **适用场景**：企业用户、受监管行业（金融、医疗）、需要高安全性
+- **局限性**：学习曲线、生态相对 Cursor 较新
+- **定价**：$15/月
+
+> **Windsurf vs Cursor 对比**：
+> | 维度 | Cursor | Windsurf |
+> |------|--------|----------|
+> | 定价 | $20/月 | $15/月 |
+> | 速度 | 快，但表层 | 慢，但更深入 |
+> | 合规性 | 基础 | **高（GDPR/SOC2）** |
+> | 适用场景 | 个人/小团队 | **企业/合规** |
+
+#### Replit
+- **定位**：云端 AI 原生 IDE
+- **优势**：
+  - **零配置启动**：浏览器即开即用
+  - **内置 AI 助手**：代码生成、调试、部署一体化
+  - **实时协作**：多人同时编辑
+  - **一键部署**：直接部署到云端
+- **适用场景**：快速原型开发、教学、前端项目
+- **局限性**：不适合大型项目、网络依赖、隐私问题
+- **定价**：$20/月（Core）
+
+---
+
+### 3. IDE 插件
 
 #### Cline (原 Claude Dev)
-- **定位**：VS Code 智能助手
-- **优势**：自主任务执行、文件操作能力、终端集成
-- **适用场景**：功能实现、Bug 修复、依赖管理
-- **局限性**：需要监控、防止过度依赖
+- **定位**：VS Code 的自主智能助手
+- **优势**：
+  - **自主任务执行**：可以读取、编辑、创建文件
+  - **终端集成**：可以运行命令、安装依赖、运行测试
+  - **多文件理解**：理解整个代码库结构
+  - **Claude 3.5 驱动**：强大的上下文理解
+- **适用场景**：功能实现、Bug 修复、依赖管理、配置调整
+- **局限性**：需要监控、防止过度依赖、可能产生不符合预期的代码
+- **定价**：$20/月（基于 Claude API）
 
-### 2. 命令行/Web 工具
-
-#### aider
-- **定位**：代码库级 AI 助手
-- **优势**：Git 集成、精确控制、自动化测试
-- **适用场景**：大型重构、Bug 修复、测试生成
+> **Cline 的独特价值**：
+> - 不是简单的补全，而是"虚拟结对编程伙伴"
+> - 可以自主执行完整工作流：读代码 → 理解逻辑 → 修改文件 → 运行测试 → 验证
 
 #### Continue
 - **定位**：轻量级 VS Code 插件
-- **优势**：灵活配置、多模型切换、成本低
-- **适用场景**：轻量级辅助、模型实验
+- **优势**：
+  - **灵活配置**：支持多种模型（OpenAI, Claude, 本地模型）
+  - **多模型切换**：按需切换不同 AI 模型
+  - **成本低**：支持开源模型，可完全免费使用
+  - **轻量级**：不占用太多资源
+- **适用场景**：轻量级辅助、模型实验、成本敏感项目
+- **局限性**：上下文窗口较小、无自主文件编辑
+- **定价**：免费（开源）、自付 API 费用
 
-### 3. 选择建议
+#### Codeium（IDE 插件）
+- **定位**：免费且功能丰富的 IDE 插件
+- **优势**：
+  - **完全免费**：无生成额度限制
+  - **支持 70+ 种编程语言**
+  - **跨 IDE 支持**：VSCode, JetBrains, Vim, Neovim, Emacs
+  - **功能全面**：代码补全、聊天、代码解释、搜索
+- **适用场景**：预算敏感的开发者、需要免费替代 Copilot
+- **局限性**：上下文理解较浅、无自主任务执行
+- **定价**：**免费**（个人和商业使用）
+
+#### JetBrains AI Assistant
+- **定位**：JetBrains 官方 AI 插件
+- **优势**：
+  - **深度集成**：与 IntelliJ IDEA, PyCharm 等无缝集成
+  - **上下文感知**：理解项目结构、重构历史
+  - **代码重构**：智能重构建议
+- **适用场景**：JetBrains IDE 用户、Java/Kotlin/Python 项目
+- **局限性**：仅限 JetBrains IDE、$25/月
+- **定价**：$25/月
+
+#### Bito
+- **定位**：多 IDE 智能助手
+- **优势**：
+  - **多 IDE 支持**：VSCode, JetBrains, Chrome, Jira
+  - **GPT-4 驱动**：强大的上下文理解
+  - **代码解释**：易于理解的解释
+  - **团队协作**：可共享对话
+- **适用场景**：代码审查、学习、团队协作
+- **局限性**：上下文窗口限制、无自主编辑
+- **定价**：$15/月
+
+---
+
+### 4. CLI 工具
+
+#### aider
+- **定位**：代码库级 AI 助手（命令行）
+- **优势**：
+  - **Git 集成**：自动创建分支、提交、diff
+  - **精确控制**：可指定修改哪些文件、哪些行
+  - **自动化测试**：修改代码后自动运行测试
+  - **支持多种模型**：Claude, GPT-4, 本地模型
+- **适用场景**：大型重构、Bug 修复、测试生成、批量修改
+- **局限性**：无图形界面、需要命令行熟练度
+- **定价**：$10/月（开源版免费）
+
+> **aider 的独特价值**：
+> - "AI 驱动的 git workflow"
+> - 每次修改都会创建 git diff，方便审查
+> - 支持回滚和对比
+
+#### gpt-engineer
+- **定位**：AI 驱动的项目生成工具
+- **优势**：
+  - **项目级生成**：可以生成整个项目结构
+  - **可迭代**：基于反馈持续优化
+  - **本地运行**：可使用本地模型
+- **适用场景**：快速原型、学习项目、启动新项目
+- **局限性**：生成质量参差、需要大量调整
+- **定价**：开源免费
+
+#### Claude Code（CLI 版本）
+- **定位**：Anthropic 官方 AI 编程助手（命令行 + GUI）
+- **优势**：
+  - **官方集成**：由 Anthropic 官方维护，与 Claude 模型深度集成
+  - **双模式支持**：Plan 模式（问答设计）+ Agent 模式（自主执行）
+  - **强大的上下文理解**：可以理解整个代码库
+  - **Subagent 系统**：支持自定义专业 subagents（code-reviewer, security-auditor 等）
+  - **多模型支持**：Claude 3.5 Sonnet, Opus, Haiku 等
+- **适用场景**：复杂功能开发、代码审查、需求分析、架构设计
+- **局限性**：仅支持 Claude 模型（无法使用 GPT-4、Gemini 等）、需要 API Key
+- **定价**：按 Token 计费（Claude API）
+
+> **Claude Code 的独特价值**：
+> - "Plan → Execute" 的工作流
+> - Plan 模式：Ask（问答）、Quest（规范驱动设计）
+> - Agent 模式：自主执行，可以修改文件、运行命令、运行测试
+> - 内置 22 个生命周期钩子，精细控制 Agent 行为
+
+#### OpenCode（Oh My OpenCode）
+- **定位**：企业级 AI Agent 编排系统（当前正在使用）
+- **优势**：
+  - **多模型 Agent 编排**：同时支持 Claude, GPT-4, Gemini, Grok 等多种模型
+  - **Sisyphus 主编排器**：智能任务分解、分配、执行、追踪
+  - **专业 Agent 体系**：Explore（代码库探索）、Librarian（文档查询）、Oracle（架构设计）等
+  - **22 个生命周期钩子**：精细控制 Agent 行为（Todo Continuation, Comment Checker, Context Monitor 等）
+  - **11+ LSP/AST 工具**：强大的代码分析和重构能力
+  - **生产验证**：经过 $24,000 worth of tokens 的生产环境测试
+  - **12.7k GitHub Stars**：社区验证的实用性
+- **适用场景**：
+  - 大型项目开发（多文件、多模块）
+  - 跨项目协作（前后端对接）
+  - 复杂重构（需要深度代码库理解）
+  - 代码审查和质量把关
+  - 团队级 AI Agent 编排
+- **局限性**：
+  - 学习成本较高（需要理解 Agent 编排概念）
+  - 配置复杂度较高
+  - 需要团队协作经验
+- **定价**：按 Token 计费（支持多种模型，成本可控）
+
+> **OpenCode 的核心价值**：
+> > "Sisyphus（西西弗斯）推石头上山" - LLM Agents 也像人类一样，每天推着自己的"石头"（代码）。给予他们优秀的工具和可靠的队友，他们就能写出像人类一样好，甚至更好的代码。
+>
+> **关键特性**：
+> - **多模型优于单模型**：不同模型用于不同任务（Claude Opus 编排、GPT-5.2 架构、Grok Code 探索）
+> - **Background Agents**：后台并行执行多个 Agent，不阻塞主流程
+> - **Todo Continuation Enforcer**：强制 Agent 完成所有 TODO，防止半途而废
+> - **Context Window Monitor**：监控上下文使用，85% 时主动提醒，保证质量
+> - **Session Recovery**：自动从错误中恢复，会话不会崩溃
+>
+> **与 Claude Code 的区别**：
+> | 维度 | Claude Code | OpenCode |
+> |------|------------|----------|
+> | 模型支持 | 仅 Claude | Claude + GPT + Gemini + Grok（多模型）|
+> | Agent 编排 | 基础 Subagent | 企业级多 Agent 编排系统 |
+> | 生命周期钩子 | 22 个 | 22 个 + 自定义钩子 |
+> | LSP/AST 工具 | 基础 | 11+ 高级工具 |
+> | 生产验证 | 较新 | 经过 $24K tokens 生产测试 |
+> | 学习成本 | 中 | 高（但回报更大）|
+> | 适用规模 | 个人/小团队 | 中大型团队/复杂项目 |
+
+---
+
+#### prompt-engineer（Aider 相关工具）
+- **定位**：提示词工程辅助工具
+- **优势**：
+  - **提示词优化**：自动优化提示词
+  - **上下文管理**：智能管理代码库上下文
+  - **批量执行**：可批量执行多个任务
+- **适用场景**：需要大量 AI 交互的项目、提示词实验
+- **局限性**：学习成本较高
+- **定价**：开源免费
+
+---
+
+### 5. 最原始的方式：直接对话 + 手动复制
+
+#### ChatGPT / Claude Web / Gemini Web
+
+- **定位**：最基础的 AI 编程方式
+- **工作方式**：
+  1. 在 ChatGPT / Claude / Gemini 网页版中提问
+  2. AI 生成代码或建议
+  3. 手动复制有用的信息到自己的项目中
+- **优势**：
+  - **零门槛**：无需安装任何工具，打开网页就能用
+  - **灵活**：可以自由提问，不受工具限制
+  - **成本低**：网页版免费或低成本（$20/月）
+  - **多语言**：中文、英文都可以问
+  - **适合学习**：通过对话理解代码逻辑
+- **适用场景**：
+  - 学习新技术、新框架
+  - 查询 API 用法、代码示例
+  - 代码解释（理解别人的代码）
+  - 快速生成简单代码片段
+  - Bug 诊断（错误信息分析）
+  - 编写文档、注释
+- **局限性**：
+  - **无上下文**：AI 无法访问你的代码库
+  - **手动复制**：需要手动复制粘贴，效率低
+  - **版本控制**：无法自动跟踪变更
+  - **测试集成**：无法自动运行测试
+  - **一致性**：多次提问可能得到不一致的答案
+- **定价**：
+  - ChatGPT：免费版 / $20/月（GPT-4）
+  - Claude：免费版 / $20/月（Claude Pro）
+  - Gemini：免费版 / $20/月（Gemini Advanced）
+
+> **直接对话的独特价值**：
+> > - 最简单、最直接的 AI 编程方式
+> > - 适合学习、探索、快速获取信息
+> > - 灵活性高，不受工具限制
+> > - 跨平台：网页、手机、平板都能用
+>
+> **最佳实践**：
+> > 1. **提供足够的上下文**：粘贴相关代码片段，而不是只描述问题
+> > 2. **逐步提问**：复杂问题拆分成多个小问题
+> > 3. **验证结果**：AI 给出的代码要测试，不要直接使用
+> > 4. **保存对话**：有用的对话保存到文档中，方便后续参考
+> > 5. **使用代码块**：让 AI 用 ``` 语言名 ``` 格式输出代码，便于复制
+
+#### 实战案例
+
+##### 案例 1：查询 API 用法
+```
+你的提问：
+"如何在 React 中使用 useEffect 发起异步请求？"
+
+AI 回答：
+```javascript
+import { useState, useEffect } from 'react';
+
+function UserProfile({ userId }) {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await fetch(`/api/users/${userId}`);
+        const data = await response.json();
+        setUser(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUser();
+  }, [userId]);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+  return <div>{user.name}</div>;
+}
+```
+
+你的操作：
+1. 理解代码逻辑
+2. 复制到项目中
+3. 根据项目实际情况调整（API 地址、错误处理等）
+4. 测试验证
+```
+
+##### 案例 2：Bug 诊断
+```
+你的提问：
+"我的 React 组件报错了：
+Uncaught TypeError: Cannot read properties of undefined (reading 'map')
+代码如下：
+[粘贴你的代码]
+
+请帮我分析问题并修复。"
+
+AI 回答：
+```javascript
+// 问题分析：
+// 错误 'Cannot read properties of undefined (reading 'map')'
+// 通常意味着你在一个 undefined 的数组上调用 .map()
+
+// 可能的原因：
+// 1. data 初始值是 null 或 undefined
+// 2. API 请求还未完成，data 还没赋值
+// 3. API 返回的数据结构与预期不符
+
+// 解决方案：
+// 在调用 .map() 之前添加检查
+
+function UserList() {
+  const [users, setUsers] = useState([]); // 初始值设为空数组
+
+  return (
+    <div>
+      {users.length > 0 ? (
+        users.map(user => <div key={user.id}>{user.name}</div>)
+      ) : (
+        <div>No users</div>
+      )}
+    </div>
+  );
+}
+```
+
+你的操作：
+1. 理解问题原因
+2. 应用 AI 的解决方案
+3. 测试验证是否修复
+```
+
+##### 案例 3：学习新框架
+```
+你的提问：
+"我刚学 Vue 3，请帮我理解：
+1. Composition API 是什么？
+2. 与 Options API 有什么区别？
+3. 给我一个简单的对比示例。"
+
+AI 回答：
+```javascript
+// Options API（Vue 2 风格）
+export default {
+  data() {
+    return {
+      count: 0
+    }
+  },
+  methods: {
+    increment() {
+      this.count++
+    }
+  }
+}
+
+// Composition API（Vue 3 风格）
+import { ref } from 'vue'
+
+export default {
+  setup() {
+    const count = ref(0)
+
+    const increment = () => {
+      count.value++
+    }
+
+    return {
+      count,
+      increment
+    }
+  }
+}
+
+// 主要区别：
+// 1. Composition API 更灵活，可以更好地复用逻辑
+// 2. Options API 更直观，适合简单组件
+// 3. Composition API 使用 ref/reactive 响应式数据
+// 4. Composition API 更容易进行 TypeScript 支持
+```
+
+你的操作：
+1. 理解概念和区别
+2. 保存对话到笔记中
+3. 实践尝试
+```
+
+#### 进阶技巧
+
+##### 1. 结构化提问
+```
+❌ 不好：
+"帮我写个登录功能"
+
+✅ 好：
+"帮我写一个 React 登录功能，需求如下：
+1. 技术栈：React + TypeScript + Axios
+2. 功能：用户名密码登录、错误提示、加载状态
+3. UI：使用 Material-UI 组件库
+4. 后端 API：POST /api/auth/login
+5. 需要处理的错误：网络错误、密码错误、服务器错误
+6. 代码风格：使用函数组件 + Hooks
+
+请给出完整代码和详细注释。"
+```
+
+##### 2. 迭代优化
+```
+第一次提问：
+"帮我写一个快速排序算法"
+
+AI 回答后：
+"很好，请优化一下：
+1. 添加详细注释
+2. 处理边界情况（空数组、单元素数组）
+3. 使用 TypeScript 类型定义
+4. 给出使用示例"
+```
+
+##### 3. 代码审查
+```
+粘贴你的代码：
+[粘贴代码]
+
+提问：
+"请帮我审查这段代码，重点关注：
+1. 性能问题
+2. 安全隐患
+3. 代码风格
+4. 潜在 Bug
+5. 优化建议"
+```
+
+##### 4. 学习路径规划
+```
+提问：
+"我想学习 Vue 3，请帮我制定一个学习路径：
+1. 从零基础到能独立开发项目
+2. 学习时间：4 周
+3. 每周学习目标
+4. 推荐学习资源
+5. 练习项目建议
+
+请给出详细计划。"
+```
+
+#### 何时升级到其他工具？
+
+| 信号 | 建议升级到 |
+|------|-----------|
+| **频繁复制粘贴** | Copilot, Codeium（自动补全）|
+| **需要 AI 理解整个代码库** | Cursor, Cline, OpenCode |
+| **需要自动运行测试** | aider, OpenCode |
+| **需要 Git 集成** | aider, OpenCode |
+| **需要多模型支持** | OpenCode |
+| **团队协作需求** | Cursor, OpenCode |
+
+> **建议的升级路径**：
+> ```
+> 阶段 1（0-2 周）：直接对话
+> └─ 目标：熟悉 AI 辅助编程
+> └─ 学习提示词技巧
+>
+> 阶段 2（2-4 周）：代码补全
+> └─ 升级到 Copilot / Codeium
+> └─ 提升日常编码效率
+>
+> 阶段 3（1-3 个月）：自主开发
+> └─ 升级到 Cursor / Cline / Claude Code
+> └─ 实现复杂功能
+>
+> 阶段 4（3-6 个月）：企业级编排
+> └─ 升级到 OpenCode
+> └─ 团队协作、复杂项目
+> ```
+
+---
+
+### 6. 工具选择建议
+
+#### 使用场景与推荐工具
 
 | 使用场景 | 推荐工具 | 理由 |
 |---------|---------|------|
-| | 日常编码补全 | Copilot | 无干扰、快速响应 |
-| | 新功能开发 | Cursor / Cline | 多文件理解、自主执行 |
-| | 大型重构 | aider | Git 集成、可控性强 |
-| | 成本敏感 | Continue + 开源模型 | 自定义配置、成本低 |
+| **日常编码补全** | Copilot / Codeium | 无干扰、快速响应 |
+| **新功能开发** | Cursor / Cline | 多文件理解、自主执行 |
+| **大型重构** | aider | Git 集成、可控性强 |
+| **成本敏感** | Codeium（免费） | 完全免费、无限制 |
+| **企业/合规** | Windsurf | GDPR/SOC2 合规 |
+| **预算敏感+功能需求** | Continue + 开源模型 | 自定义配置、成本低 |
+| **快速原型** | Replit | 零配置、云端部署 |
+| **JetBrains 用户** | JetBrains AI Assistant | 深度集成、上下文感知 |
+| **Claude 生态用户** | Claude Code | 官方集成、Plan/Agent 模式 |
+| **企业级 AI 编排** | **OpenCode**（推荐）| 多模型 Agent 编排、生产验证 |
+| **命令行/脚本** | Claude Code / aider | 强大的 CLI 工作流 |
+| **复杂项目开发** | **OpenCode**（推荐）| 多 Agent 并行、深度代码库理解 |
+
+#### 选择决策流程
+
+```
+第一步：确定使用场景
+├─ 日常编码补全 → Codeium（免费）或 Copilot
+├─ 新功能开发 → Cursor（多文件编辑）
+├─ 企业/合规 → Windsurf
+└─ 命令行/脚本 → aider
+
+第二步：考虑成本
+├─ 免费 → Codeium, gpt-engineer, 开源模型
+├─ $10-15/月 → Continue, JetBrains AI, aider
+└─ $20+/月 → Cursor, Copilot X, Cline
+
+第三步：考虑学习曲线
+├─ 低 → Codeium, Copilot（直接上手）
+└─ 高 → Cursor, Windsurf, aider（需要学习）
+
+第四步：考虑团队规模
+├─ 个人/小团队 → Cursor, Cline
+└─ 大团队/企业 → Windsurf, aider（合规性）
+```
 
 ### 4. Subagent 系统
 
@@ -4047,12 +4601,187 @@ graph TD
 - [AI Coding Best Practices](https://github.com/prompt-engineering/best-practices)
 
 ### 工具对比表
-| 工具 | 价格 | 适用场景 | 学习成本 | 推荐指数 |
-|------|------|---------|---------|---------|
-| Copilot | $10/月 | 日常编码 | 低 | ⭐⭐⭐⭐⭐ |
-| Cursor | $20/月 | 新功能开发 | 中 | ⭐⭐⭐⭐ |
-| Cline | Claude API 费用 | VS Code 用户 | 低 | ⭐⭐⭐⭐ |
-| aider | 免费（自选模型） | 高级用户 | 高 | ⭐⭐⭐ |
+
+#### 1. 编辑补全助手对比
+
+| 工具 | 价格 | 优势 | 局限性 | 学习成本 | 推荐指数 |
+|------|------|------|--------|---------|---------|
+| **GitHub Copilot** | $10/月 | GitHub 生态、多语言支持、上下文感知 | 无自主性、需明确引导 | 低 | ⭐⭐⭐⭐⭐ |
+| **GitHub Copilot X** | $20/月 | GPT-4 驱动、对话式交互、代码解释 | 成本更高 | 低 | ⭐⭐⭐⭐ |
+| **Codeium（免费）** | **免费** | 完全免费、无额度限制、轻量级 | 上下文理解较浅 | 低 | ⭐⭐⭐⭐⭐ |
+| **Tabnine** | $12/月 | 支持私有化部署、本地模型可选 | 上下文窗口较小 | 低 | ⭐⭐⭐ |
+| **CodeWhisperer** | 免费/Pro $19/月 | AWS 集成、云服务支持 | 仅适合 AWS 生态 | 低 | ⭐⭐⭐ |
+
+#### 2. 原生 IDE (AI Native IDE) 对比
+
+| 工具 | 价格 | 优势 | 局限性 | 学习成本 | 推荐指数 |
+|------|------|------|--------|---------|---------|
+| **Cursor** | $20/月 | 多文件编辑、自主代码库理解、Composer 模式 | $20/月、迁移成本 | 中 | ⭐⭐⭐⭐⭐ |
+| **Windsurf** | $15/月 | 更便宜、GDPR/SOC2 合规、深度代码库理解 | 生态较新、学习曲线 | 中 | ⭐⭐⭐⭐ |
+| **Replit** | $20/月 | 零配置、云端 IDE、一键部署 | 不适合大型项目、网络依赖 | 低 | ⭐⭐⭐⭐ |
+
+#### 3. IDE 插件对比
+
+| 工具 | 价格 | 优势 | 局限性 | 学习成本 | 推荐指数 |
+|------|------|------|--------|---------|---------|
+| **Cline** | Claude API 费用 | 自主任务执行、终端集成、Claude 3.5 | 需监控、可能产生意外代码 | 低 | ⭐⭐⭐⭐⭐ |
+| **Continue** | 免费 + API 费用 | 灵活配置、多模型支持、成本低 | 上下文窗口较小 | 低 | ⭐⭐⭐⭐ |
+| **Codeium IDE 插件** | **免费** | 完全免费、跨 IDE 支持、功能全面 | 无自主任务执行 | 低 | ⭐⭐⭐⭐⭐ |
+| **JetBrains AI Assistant** | $25/月 | 深度集成 JetBrains、重构能力强 | 仅限 JetBrains IDE、$25/月 | 低 | ⭐⭐⭐⭐ |
+| **Bito** | $15/月 | 多 IDE 支持、GPT-4 驱动、团队协作 | 上下文窗口限制 | 低 | ⭐⭐⭐ |
+
+#### 4. CLI 工具对比
+
+| 工具 | 价格 | 优势 | 局限性 | 学习成本 | 推荐指数 |
+|------|------|------|--------|---------|---------|
+| **OpenCode**（推荐）| 按 Token 计费（多模型）| 多模型 Agent 编排、生产验证、22 个钩子 | 学习成本高、配置复杂 | 高 | ⭐⭐⭐⭐⭐ |
+| **Claude Code** | 按 Token 计费（Claude API）| 官方集成、Plan/Agent 模式、Subagent 系统 | 仅支持 Claude | 中 | ⭐⭐⭐⭐⭐ |
+| **aider** | $10/月（开源版免费） | Git 集成、精确控制、自动化测试 | 无图形界面、需命令行熟练度 | 高 | ⭐⭐⭐⭐ |
+| **gpt-engineer** | 免费（开源） | 项目级生成、可迭代、本地运行 | 生成质量参差、需大量调整 | 中 | ⭐⭐⭐ |
+| **prompt-engineer** | 免费（开源） | 提示词优化、上下文管理 | 学习成本较高 | 中 | ⭐⭐⭐ |
+
+#### 5. 最原始的方式对比
+
+| 工具 | 价格 | 优势 | 局限性 | 学习成本 | 推荐指数 |
+|------|------|------|--------|---------|---------|
+| **ChatGPT / Claude Web** | 免费/Pro $20/月 | 零门槛、灵活、成本低 | 无上下文、手动复制 | 低 | ⭐⭐⭐⭐⭐ |
+| **Gemini Web** | 免费/Pro $20/月 | 免费、快速、多模态 | 无上下文、手动复制 | 低 | ⭐⭐⭐⭐⭐ |
+
+#### 6. 综合推荐指数
+
+| 场景 | 首选 | 次选 | 理由 |
+|------|------|------|------|
+| **学习新技术** | ChatGPT / Claude Web | OpenCode | 零门槛、灵活提问 |
+| **代码解释** | ChatGPT / Claude Web | Codeium | 手动粘贴、自由对话 |
+| **快速查询 API** | ChatGPT / Claude Web | Cursor | 快速获取示例 |
+| **日常编码补全** | Codeium（免费）| Copilot | Codeium 免费，Copilot 生态好 |
+| **新功能开发** | Cursor | Cline | Cursor 多文件编辑能力强 |
+| **企业/合规** | Windsurf | Cursor + Copilot X | Windsurf 满足 GDPR/SOC2 |
+| **预算敏感** | ChatGPT / Claude Web（免费） | Codeium + Continue | 完全免费方案 |
+| **VS Code 用户** | Cline | Continue | 深度 VS Code 集成 |
+| **JetBrains 用户** | JetBrains AI Assistant | Codeium IDE 插件 | 原生集成最好 |
+| **命令行/脚本** | Claude Code | aider | 官方集成、Plan/Agent 模式 |
+| **复杂项目开发** | **OpenCode**（推荐）| Claude Code | 多模型 Agent 编排、生产验证 |
+| **企业级 AI 编排** | **OpenCode**（推荐）| Claude Code + Cursor | 多模型并行、22 个钩子 |
+| **Claude 生态用户** | Claude Code | OpenCode | 官方集成、简单易用 |
+| **跨项目协作** | **OpenCode**（推荐）| Claude Code | 多 Agent 协作、Librarian 探索 |
+| **大型重构** | aider | OpenCode | Git 集成 vs Agent 编排 |
+
+#### 7. 价格总结
+
+| 价格区间 | 工具 | 适用场景 |
+|---------|------|---------|
+| **完全免费** | ChatGPT / Claude Web（免费版）、Codeium、gpt-engineer、Continue（开源模型）| 学习、预算敏感、个人开发者 |
+| **$10-15/月** | Tabnine、Copilot、Windsurf、Bito | 日常使用、企业用户 |
+| **$20+/月** | Cursor、Copilot X、Replit、JetBrains AI Assistant、ChatGPT Pro、Claude Pro | 专业开发、需要高级功能 |
+| **按 Token 计费** | Claude Code、OpenCode | 按需付费、灵活控制成本 |
+| **开源免费** | aider（开源版）、gpt-engineer、prompt-engineer | 愿意自建、学习研究 |
+
+#### 8. 快速选择指南
+
+```
+选择工具的关键问题：
+
+1. 预算？
+   - 完全免费 → ChatGPT / Claude Web（免费版）、Codeium、gpt-engineer、Continue（开源模型）
+   - $10-20/月 → Copilot、Cursor、Windsurf
+   - $20+/月 → Copilot X、Cursor Pro、JetBrains AI、ChatGPT Pro、Claude Pro
+   - 按 Token 计费 → Claude Code、OpenCode（灵活控制成本）
+   - 不限成本 → Cursor Pro + OpenCode + Claude Code
+
+2. 使用场景？
+   - 学习新技术 / 查询 API → ChatGPT / Claude Web（最原始、最直接）
+   - 代码解释 / Bug 诊断 → ChatGPT / Claude Web
+   - 日常补全 → Codeium、Copilot
+   - 新功能开发 → Cursor、Cline
+   - 大型重构 → aider、OpenCode
+   - 企业/合规 → Windsurf
+   - 复杂项目开发 → OpenCode（推荐）
+   - 企业级 AI 编排 → OpenCode（推荐）
+   - Claude 生态 → Claude Code
+   - 跨项目协作 → OpenCode（Librarian + Explore）
+
+3. 开发环境？
+   - 网页 / 手机 → ChatGPT / Claude Web（零门槛）
+   - VS Code → Cline、Continue、Codeium
+   - JetBrains → JetBrains AI Assistant
+   - 命令行 → Claude Code、OpenCode（推荐）、aider
+   - 原生 IDE → Cursor、Windsurf
+   - 云端 IDE → Replit
+
+4. 学习时间？
+   - 立即上手 → ChatGPT / Claude Web（零门槛）、Codeium、Copilot
+   - 愿意学习 1-2 小时 → Cursor、Windsurf、Claude Code
+   - 愿意学习 1 周 → aider、OpenCode
+
+5. 团队规模？
+   - 个人/小团队（2-5 人）→ ChatGPT / Claude Web + Cursor
+   - 中型团队（5-10 人）→ OpenCode + Codeium
+   - 大型团队（10+ 人）→ OpenCode + SpecKit + Windsurf
+
+6. 专业需求？
+   - 需要多模型支持 → OpenCode（推荐）
+   - 需要 Git 集成 → aider
+   - 需要深度代码库理解 → Cursor、OpenCode
+   - 需要生产验证 → OpenCode（推荐）
+   - 需要官方 Claude 支持 → Claude Code
+   - 需要零门槛 → ChatGPT / Claude Web
+```
+
+#### 8. OpenCode 使用建议（当前工具）
+
+**为什么选择 OpenCode？**
+- ✅ 多模型 Agent 编排（Claude + GPT + Gemini + Grok）
+- ✅ 生产验证（$24,000 tokens 测试）
+- ✅ 22 个生命周期钩子（精细控制）
+- ✅ 11+ LSP/AST 工具（强大代码分析）
+- ✅ Background Agents（并行执行）
+- ✅ Todo Continuation（强制完成）
+
+**适用场景**
+- 🎯 大型项目开发（多文件、多模块）
+- 🎯 跨项目协作（前后端对接）
+- 🎯 复杂重构（深度代码库理解）
+- 🎯 代码审查（code-reviewer）
+- 🎯 安全审计（security-auditor）
+- 🎯 团队级 AI Agent 编排
+
+**学习路径**
+```
+阶段 1（1-2 天）：
+├─ 配置 OpenCode 环境
+├─ 了解 Sisyphus 主编排器
+├─ 学习基本 @mention 语法
+└─ 完成简单任务（代码审查、文档生成）
+
+阶段 2（1 周）：
+├─ 配置自定义 Subagents
+├─ 使用 Background Agents 并行执行
+├─ 理解生命周期钩子
+└─ 完成中等复杂度任务（新功能开发）
+
+阶段 3（2-4 周）：
+├─ 多模型 Agent 编排
+├─ 自定义钩子和工具
+├─ 复杂任务拆解和分配
+└─ 完成复杂项目（多模块重构）
+```
+
+**最佳实践**
+- ✅ 从简单任务开始（代码审查、文档生成）
+- ✅ 使用 @explore 快速理解代码库
+- ✅ 使用 @librarian 查找最佳实践
+- ✅ 使用 @oracle 获取架构建议
+- ✅ 使用 Background Agents 并行执行
+- ✅ 建立 Todo 追踪，确保任务完成
+- ✅ 监控 Context Window 使用（85% 时压缩）
+- ✅ 定期 Review AI 生成的代码
+
+**常见误区**
+- ❌ 期望 OpenCode 完全自主（需要监控和审查）
+- ❌ 直接用于生产代码（必须人工审查）
+- ❌ 跳过 Todo 追踪（会导致任务半途而废）
+- ❌ 不理解上下文就执行（先 Ask 模式理解）
 
 ### 常用提示词模板集
 （待补充，团队内部积累）
