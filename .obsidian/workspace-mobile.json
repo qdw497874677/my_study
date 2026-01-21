@@ -1,0 +1,215 @@
+{
+  "main": {
+    "id": "aefdcdb80904b62e",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b2623ad5c73d838",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6d13d14b27d450cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "study_of_ai_coding/ai-coding-sharing-pyramid.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ai-coding-sharing-pyramid"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "628f87a06863b364",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "3fff8effea4f52f4",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false
+          },
+          "icon": "lucide-folder-closed",
+          "title": "文件列表"
+        }
+      },
+      {
+        "id": "8dd50e86da226f53",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "搜索"
+        }
+      },
+      {
+        "id": "5fe861d51b9ca576",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "标签"
+        }
+      },
+      {
+        "id": "01ee4f59eac05a2a",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-ghost",
+          "title": "all-properties"
+        }
+      },
+      {
+        "id": "7d581333bf3446ed",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "书签"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "6ddd7fa69c20c9eb",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "48f8bb8cb2d8566e",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "study_of_ai_coding/ai-coding-sharing-outline.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "反向链接"
+        }
+      },
+      {
+        "id": "b0e4e12392410e6f",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "study_of_web3/项目/Web3深度学习/知识卡片/01. 既然PoW能耗这么高，为什么比特币不改用其他共识机制？.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "出链"
+        }
+      },
+      {
+        "id": "f99b9ec0747f13bc",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "study_of_ai_coding/ai-coding-sharing-pyramid.md",
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "大纲"
+        }
+      }
+    ],
+    "currentTab": 2
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:新建数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "6d13d14b27d450cf",
+  "lastOpenFiles": [
+    "study_of_ai_coding/ai-coding-sharing-outline.md",
+    "/what_is_skills/项目/Claude和GPT的区别/输出卡片/02-实际使用中的反转",
+    "/what_is_skills/项目/Claude和GPT的区别/输出卡片",
+    "/what_is_skills/项目/Claude和GPT的区别",
+    "/what_is_skills/项目",
+    "/what_is_skills/_系统/塔斯海的高质样例",
+    "/what_is_skills/_系统",
+    "/what_is_skills",
+    "/study_of_economics/项目/Claude和GPT的区别/输出卡片/02-实际使用中的反转",
+    "/study_of_economics/项目/Claude和GPT的区别/输出卡片",
+    "/study_of_economics/项目/Claude和GPT的区别",
+    "/study_of_ai_coding/ai-coding-sharing-pyramid.md",
+    "/study_of_ai_coding/ai-coding-sharing-outline.md",
+    "study_of_ai_coding/ai-coding-sharing-pyramid-backup.md",
+    "study_of_ai_coding/ai-coding-sharing-pyramid.md",
+    "/study_of_ai_coding/ai-coding-sharing-pyramid-backup.md",
+    "study_of_web3/项目/Web3深度学习/知识卡片/01. 既然PoW能耗这么高，为什么比特币不改用其他共识机制？.md",
+    "study_of_ai_coding/AGENTS.md",
+    "PROJECTS.md",
+    "/study_of_web3/项目/Web3深度学习/项目信息.md",
+    "/study_of_ai_coding/AGENTS.md",
+    "/PROJECTS.md",
+    "what_is_skills/项目/Claude技能系统深度解析/项目信息.md",
+    "what_is_skills/项目/Claude技能系统深度解析/知识卡片/02. Claude技能系统如何重构渐进式披露？从用户记忆到AI记忆的革命.md",
+    "what_is_skills/项目/Claude技能系统深度解析/知识卡片/01. 传统渐进式披露的痛点是什么？为什么所有软件都做不好？.md",
+    "what_is_skills/项目/Claude技能系统深度解析/初始文档.md",
+    "what_is_skills/项目/Claude和GPT的区别/项目信息.md",
+    "what_is_skills/项目/Claude和GPT的区别/输出卡片/01-编程能力差异的技术根源/02-不是代码越多越好，数据质量的秘密.md",
+    "what_is_skills/项目/Claude和GPT的区别/输出卡片/01-编程能力差异的技术根源/01-架构相同，差异在哪？训练的五个关键环节.md",
+    "what_is_skills/项目/Claude和GPT的区别/知识卡片/02. Claude建构强但debug弱？理论优势在实际场景的反转.md",
+    "what_is_skills/项目/Claude和GPT的区别/知识卡片/01. 同样是Transformer架构，为什么Claude编程能力更强？.md",
+    "what_is_skills/项目/Claude和GPT的区别/最终成稿-Claude和GPT的区别.md",
+    "what_is_skills/项目/Claude和GPT的区别/初始文档.md",
+    "what_is_skills/项目/Claude和GPT的区别/内容白板.canvas",
+    "what_is_skills/_系统/规范/输出卡片组织.md",
+    "what_is_skills/_系统/规范/知识卡片组织.md",
+    "study_of_llm/项目/Claude和GPT的区别/内容白板.canvas",
+    "study_of_economics/项目/Claude和GPT的区别/内容白板.canvas",
+    "notebook2/项目/Claude和GPT的区别/内容白板.canvas",
+    "notebook1/项目/Claude和GPT的区别/内容白板.canvas"
+  ]
+}
