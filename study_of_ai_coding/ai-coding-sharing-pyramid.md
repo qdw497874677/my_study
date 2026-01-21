@@ -474,7 +474,7 @@ superpowers中的
 1. 出现错误
 2. review
 
-如何实现，定义
+如何实现，工具自带，检索方式定义在全局规则，hook，subagent规则等等
 加载过程尽量不要占用主agent，规划阶段使用skill懒加载，review阶段使用hook+subagent+skill会话隔离
 
 
