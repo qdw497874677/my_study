@@ -458,8 +458,8 @@ superpowers中的
 
 #### 复用内容
 分类
-1. 踩坑修复。
-2. 方案选型。应用COLA结构。
+1. 踩坑修复。junit使用
+2. 方案选型。应用COLA结构。存储接口定义应该在domain层。写es实现应该放在基础设施层。ju
 3. 高频问答。
 
 
@@ -471,6 +471,7 @@ superpowers中的
 
 
 加载过程尽量不要占用主agent，规划阶段使用skill懒加载，review阶段使用hook+subagent+skill会话隔离
+
 
 
 
