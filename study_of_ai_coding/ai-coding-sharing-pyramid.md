@@ -482,6 +482,10 @@ superpowers中的
 
 
 
+
+代码本身也是经验
+
+
 参考cc之父工作流
 740 万围观！Claude Code 之父的工作流火了 740 万围... http://xhslink.com/o/2WnLEAbiXoq 
 复制后打开【小红书】查看笔记！
