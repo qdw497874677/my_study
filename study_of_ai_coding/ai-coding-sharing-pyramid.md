@@ -470,7 +470,7 @@ superpowers中的
 4. 混合
 
 
-加载过程尽量不要
+加载过程尽量不要占用主agent，规划阶段使用skill懒加载，review阶段使用hook+subagent+skill会话隔离
 
 
 
