@@ -460,7 +460,12 @@ superpowers中的
 
 
 #### 实现载体
-规则文件(AGENT)
+1. 规则文件(AGENTS.md)
+2. skills(本地文件)
+3. mcp + 后端
+4. 混合
+
+
 
 
 
