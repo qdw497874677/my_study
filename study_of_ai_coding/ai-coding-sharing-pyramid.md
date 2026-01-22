@@ -445,7 +445,10 @@ https://github.com/obra/superpowers
 特点
 TDD,两阶段审查
 
-如何实现的,多个skill，
+如何实现
+技能库，核心能力封装成技能
+发现机制，通用的发现skill和
+集成层，通过具体coding agent的原生机制来接入插件
 
 
 fork新会话，基于文档交互
