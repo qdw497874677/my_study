@@ -528,15 +528,18 @@ superpowers中的
 
 ## 相关分享
 
-happy
-Claude Code/Codex的移动端
-https://github.com/slopus/happy
-
-
-vibe kanban
+### vibe kanban
 用看板的形式，驱动ai coding项目
 ![[Pasted image 20260122195916.png]]
 https://github.com/BloopAI/vibe-kanban
+
+
+### happy
+Claude Code/Codex的移动端
+![[Pasted image 20260122200132.png]]
+https://github.com/slopus/happy
+
+
 
 
 ## 角色转变
