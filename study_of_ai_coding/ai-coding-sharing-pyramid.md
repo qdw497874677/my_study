@@ -558,9 +558,11 @@ https://github.com/obra/superpowers
 - **会话工具**：列出、读取、搜索和分析会话历史
 - **生产力功能**：Ralph Loop、Todo Enforcer、Comment Checker、Think Mode 等
 
-工作流:头脑风暴，工作区隔离,写计划，执行计划(子代理驱动，并行会话，评审，TDD)，完成
-特点
-TDD,两阶段审查
+特点：
+1. 拥抱多模型
+2. 随时调度后台subagent
+3. 工具齐全，开箱即用
+4. 兼容cc
 
 
 #### 如何实现
