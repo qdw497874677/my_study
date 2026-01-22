@@ -449,6 +449,25 @@ TDD,两阶段审查
 技能库，核心能力封装成技能
 发现机制，通用的工具和提示词，用来发现和编排技能。
 集成层，通过具体coding agent的原生机制来接入插件。
+1. **brainstorming/SKILL.md** - Design phase, outputs to `docs/plans/YYYY-MM-DD-topic-design.md`  
+    **头脑风暴/SKILL.md** - 设计阶段，输出到 `docs/plans/YYYY-MM-DD-topic-design.md`
+2. **using-git-worktrees/SKILL.md** - Workspace isolation on new branch  
+    **using-git-worktrees/SKILL.md** - 新分支工作区隔离
+3. **writing-plans/SKILL.md** - Implementation plan, outputs to `docs/plans/YYYY-MM-DD-feature-name.md`  
+    **writing-plans/SKILL.md** - 实施计划，输出于 `docs/plans/YYYY-MM-DD-feature-name.md`
+4. **subagent-driven-development/SKILL.md** or **executing-plans/SKILL.md** - Execution with review loops  
+    **subagent-driven-development/SKILL.md** 或 **executing-plans/SKILL.md** - 带审查循环的执行
+    
+    
+**test-driven-development/SKILL.md** - RED-GREEN-REFACTOR enforcement  
+    **测试驱动开发/SKILL.md** - 红绿重构执行
+5. **requesting-code-review/SKILL.md** - Two-stage review (spec compliance, code quality)  
+    **requesting-code-review/SKILL.md** - 两阶段审查（规范合规，代码质量）
+6. **finishing-a-development-branch/SKILL.md** - Merge/PR/keep/discard decision  
+    **完成开发分支/SKILL.md** - 合并/PR/保留/丢弃决策
+
+The `using-superpowers/SKILL.md`
+
 
 
 fork新会话，基于文档交互
