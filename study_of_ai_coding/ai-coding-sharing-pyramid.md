@@ -526,13 +526,18 @@ superpowers中的
 
 
 
-## 额外功能分享
+## 相关分享
 
 移动coding
+https://github.com/slopus/happy
 
 
+vibe kanban
 
-## 心态转变
+https://github.com/BloopAI/vibe-kanban
+
+
+## 角色转变
 
 
 | 维度        | 乙方时代（传统编程） | 甲方时代（Vibe Coding） | 导师时代（Agentic Coding） |
