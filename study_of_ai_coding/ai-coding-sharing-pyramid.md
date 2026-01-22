@@ -575,11 +575,11 @@ superpowers这个插件的设计就是按序加载，在opencode中使用find_sk
 #### 核心技能和工作流
 1. 头脑风暴。**brainstorming/SKILL.md** - 设计阶段，输出到 `docs/plans/YYYY-MM-DD-topic-design.md`
 2. git工作区隔离。 **using-git-worktrees/SKILL.md** - 新分支工作区隔离。
-3. **writing-plans/SKILL.md** - 实施计划。输出于 `docs/plans/YYYY-MM-DD-feature-name.md`
-4. **subagent-driven-development/SKILL.md** or **executing-plans/SKILL.md** - 带审查循环的执行
-5. **test-driven-development/SKILL.md** - TDD开发。红绿重构执行。
-6. **requesting-code-review/SKILL.md** - codereview.两阶段审查（规范合规，代码质量）
-7. **finishing-a-development-branch/SKILL.md** - 结束收尾。合并/PR/保留/丢弃决策
+3. 编写计划。**writing-plans/SKILL.md** - 输出于 `docs/plans/YYYY-MM-DD-feature-name.md`
+4. 子代理驱动实施。**subagent-driven-development/SKILL.md** or **executing-plans/SKILL.md** - 带审查循环的执行
+5. TDD开发。**test-driven-development/SKILL.md** - 红绿重构执行。
+6. 代码评审。**requesting-code-review/SKILL.md** - 两阶段审查（规范合规，代码质量）
+7. 结束开发阶段。**finishing-a-development-branch/SKILL.md** - 结束收尾。合并/PR/保留/丢弃决策
 
 #### 安装
 
