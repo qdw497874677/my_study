@@ -439,6 +439,7 @@ fork新会话，基于文档交互
 superpowers中的
 
 
+
 #### 不要过多约束
 相对少的影响细节控制，比如命名。限定大的框架。
 
@@ -534,9 +535,11 @@ superpowers中的
 ## coding配置分享
 
 1. claude code + openspec
-2. claude code + openspec
+2. claude code + superpowers
 3. opencode + oh-my-opencode + superpowers
 
+
+superpowers这个插件的设计就是按序加载，在opencode中使用find_skills才能看到它的skills，牺牲了一部分自主使用能力（）
 
 ## 相关分享
 
