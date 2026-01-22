@@ -540,10 +540,6 @@ superpowers中的
 好代码本身也是经验，好代码本身可以按需加载的上下文。
 
 
-参考cc之父工作流
-740 万围观！Claude Code 之父的工作流火了 740 万围... http://xhslink.com/o/2WnLEAbiXoq 
-复制后打开【小红书】查看笔记！
-
 
 ### 总结
 
@@ -577,6 +573,15 @@ superpowers中的
 1. claude code + openspec
 2. claude code + superpowers
 3. opencode + oh-my-opencode + superpowers
+
+### oh-my-opencode
+- 多智能体编排
+7+ specialized agents (Sisyphus, oracle, librarian, explore, frontend, document-writer, multimodal-looker) across 5 AI providers
+
+
+
+
+
 
 
 superpowers这个插件的设计就是按序加载，在opencode中使用find_skills才能看到它的skills，牺牲了一部分自主使用能力（成功率不是很高），来降低工具冗余。
