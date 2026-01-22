@@ -549,7 +549,7 @@ https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
 https://github.com/obra/superpowers
 
 #### 核心能力
-- **智能体**：Sisyphus（主智能体）、Prometheus（规划器）、Oracle（架构/调试）、Librarian（文档/代码搜索）、Explore（快速代码库 grep）、Multimodal Looker
+- **智能体**：Sisyphus（主智能体，西西弗斯，代表了永恒地将巨石推上山坡）、Prometheus（规划器）、Oracle（架构/调试）、Librarian（文档/代码搜索）、Explore（快速代码库 grep）、Multimodal Looker
 - **后台智能体**：像真正的开发团队一样并行运行多个智能体
 - **LSP & AST 工具**：重构、重命名、诊断、AST 感知代码搜索
 - **上下文注入**：自动注入 AGENTS.md、README.md、条件规则
@@ -583,7 +583,7 @@ superpowers这个插件的设计就是按序加载，在opencode中使用find_sk
 6. 代码评审。**requesting-code-review/SKILL.md** - 两阶段审查（规范合规，代码质量）
 7. 结束开发阶段。**finishing-a-development-branch/SKILL.md** - 结束收尾。合并/PR/保留/丢弃决策
 
-#### 安装
+#### 安装和使用
 
 
 
