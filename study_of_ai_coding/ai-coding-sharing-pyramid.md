@@ -587,6 +587,62 @@ superpowers这个插件的设计就是按序加载，在opencode中使用find_sk
 7. 完成开发分支。**finishing-a-development-branch/SKILL.md** - 结束收尾。合并/PR/保留/丢弃决策
 
 
+#### 安装
+##### Claude Code (通过插件市场)
+
+插件市场中添加插件
+
+```shell
+/plugin marketplace add obra/superpowers-marketplace
+```
+
+安装插件
+
+```shell
+/plugin install superpowers@superpowers-marketplace
+```
+
+### Verify Installation
+
+[](https://github.com/obra/superpowers#verify-installation)
+
+Check that commands appear:
+
+```shell
+/help
+```
+
+```
+# Should see:
+# /superpowers:brainstorm - Interactive design refinement
+# /superpowers:write-plan - Create implementation plan
+# /superpowers:execute-plan - Execute plan in batches
+```
+
+### Codex
+
+[](https://github.com/obra/superpowers#codex)
+
+Tell Codex:
+
+```
+Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.codex/INSTALL.md
+```
+
+**Detailed docs:** [docs/README.codex.md](https://github.com/obra/superpowers/blob/main/docs/README.codex.md)
+
+### OpenCode
+
+[](https://github.com/obra/superpowers#opencode)
+
+Tell OpenCode:
+
+```
+Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.opencode/INSTALL.md
+```
+
+**Detailed docs:** [docs/README.opencode.md](https://github.com/obra/superpowers/blob/main/docs/README.opencode.md)
+
 
 
 作为基础能力
