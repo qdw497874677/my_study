@@ -445,6 +445,8 @@ https://github.com/obra/superpowers
 特点
 TDD,两阶段审查
 
+如何实现的,多个skill，
+
 
 fork新会话，基于文档交互
 
