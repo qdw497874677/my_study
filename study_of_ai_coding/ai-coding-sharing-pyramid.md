@@ -467,7 +467,7 @@ TDD,两阶段审查
     **完成开发分支/SKILL.md** - 合并/PR/保留/丢弃决策
 
 The `using-superpowers/SKILL.md`
-
+元技能在会话开始时注入，并强制执行检查
 
 
 fork新会话，基于文档交互
