@@ -559,6 +559,8 @@ TDD,两阶段审查
 
 通过元技能集成插件能力`using-superpowers/SKILL.md`。在会话开始时注入，并强制执行检查。
 
+superpowers这个插件的设计就是按序加载，在opencode中使用find_skills才能看到它的skills，牺牲了一部分自主使用能力（成功率不是很高，依赖g），来降低工具冗余。
+
 #### 核心技能和工作流
 1. **brainstorming/SKILL.md** - 头脑风暴。设计阶段，输出到 `docs/plans/YYYY-MM-DD-topic-design.md`
 2. **using-git-worktrees/SKILL.md** - git工作区隔离。 新分支工作区隔离。
@@ -582,10 +584,13 @@ superpowers作为项目开发工作流
 
 
 
+![[Pasted image 20260123073554.png]]
 
 
 
-superpowers这个插件的设计就是按序加载，在opencode中使用find_skills才能看到它的skills，牺牲了一部分自主使用能力（成功率不是很高），来降低工具冗余。
+
+
+
 
 ## 相关分享
 
