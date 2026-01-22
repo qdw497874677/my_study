@@ -539,7 +539,7 @@ superpowers中的
 3. opencode + oh-my-opencode + superpowers
 
 
-superpowers这个插件的设计就是按序加载，在opencode中使用find_skills才能看到它的skills，牺牲了一部分自主使用能力（）
+superpowers这个插件的设计就是按序加载，在opencode中使用find_skills才能看到它的skills，牺牲了一部分自主使用能力（成功率不是很高），来降低工具冗余。
 
 ## 相关分享
 
