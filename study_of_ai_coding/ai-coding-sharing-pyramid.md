@@ -528,23 +528,16 @@ superpowers中的
 
 
 在ai coding中，当前我理解的几个关键点：
-
 - 最好的模型
 - 适当的问题分解和隔离
 - 计划 -> 实施 -> 评审 -> 复利
 - 珍惜上下文
 
-
-### 我理解的当前实践
-
-最好的模型，适当的问题分解和隔离，
-
-新东西很多很快。优先做好那些看起来最稳定的
-
+这些是变化中的基本不变的部分。
 
 ## coding配置分享
 
-opencode + oh-my-opencode + 
+opencode + oh-my-opencode + superpowers
 
 
 
