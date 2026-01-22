@@ -441,7 +441,7 @@ opencode插件，功能配置集合。包含6个agent
 
 轻量化开发工作流插件superpowers中的子代理驱动skills
 https://github.com/obra/superpowers
-工作流:头脑风暴，写计划，执行计划(子代理驱动，并行会话)，评审
+工作流:头脑风暴，工作区隔离,写计划，执行计划(子代理驱动，并行会话，评审，TDD)，完成
 
 fork新会话，基于文档交互
 
