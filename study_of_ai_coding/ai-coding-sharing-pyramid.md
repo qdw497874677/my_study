@@ -312,7 +312,7 @@ speckit
 
 核心流程：
 ```
-Constitution → Specify → Plan → Tasks → Implement   (宪章)      (规范)    (计划)  (任务)   (实施)
+Constitution(宪章) → Specify(规范) → Plan(计划) → Tasks(任务)  → Implement(实施) 
 ```
 
 **七步工作流**：
@@ -421,6 +421,8 @@ openspec 的 Delta 机制设计得很巧妙：不同于直接存储完整的"未
 
 
 **都指向同一个目标：让 AI 编程更可控、更规范。**
+
+都
 
 
 opencode
