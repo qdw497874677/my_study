@@ -526,17 +526,16 @@ superpowers中的
 - 适当的问题分解和隔离
 - 计划 -> 实施 -> 评审 -> 复利
 - 珍惜上下文
+- 在不同规模的场景中，平衡成本和复杂度，选择适合的方式
+
 
 这些是变化中的基本不变的部分。
 
 ## coding配置分享
 
-opencode + oh-my-opencode + superpowers
-
-
-
-## skill的使用
-
+1. claude code + openspec
+2. claude code + openspec
+3. opencode + oh-my-opencode + superpowers
 
 
 ## 相关分享
