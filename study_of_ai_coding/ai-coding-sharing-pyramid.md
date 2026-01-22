@@ -547,24 +547,25 @@ https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
 3. 工具齐全，开箱即用
 4. 兼容cc
 
+#### 安装和使用
 
-- 多智能体编排
+安装：
+直接把下面内容扔给智能体：
+```
+按照以下说明安装和配置 oh-my-opencode：
+https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md
+```
+https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md
 
-7+ specialized agents (Sisyphus, oracle, librarian, explore, frontend, document-writer, multimodal-looker) across 5 AI providers
 
-- 高级工具
-
-
-- cc兼容
-
-- 后台处理
+配置项：
+https://github.com/code-yeongyu/oh-my-opencode/blob/dev/docs/configurations.md
 
 
 
 
 ### superpowers
 https://github.com/obra/superpowers
-
 
 
 #### 如何实现
@@ -584,20 +585,6 @@ superpowers这个插件的设计就是按序加载，在opencode中使用find_sk
 5. TDD开发。**test-driven-development/SKILL.md** - 红绿重构执行。
 6. 代码评审。**requesting-code-review/SKILL.md** - 两阶段审查（规范合规，代码质量）
 7. 结束开发阶段。**finishing-a-development-branch/SKILL.md** - 结束收尾。合并/PR/保留/丢弃决策
-
-#### 安装和使用
-
-安装：
-直接把下面内容扔给智能体：
-```
-按照以下说明安装和配置 oh-my-opencode：
-https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md
-```
-https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md
-
-
-配置项：
-https://github.com/code-yeongyu/oh-my-opencode/blob/dev/docs/configurations.md
 
 
 
