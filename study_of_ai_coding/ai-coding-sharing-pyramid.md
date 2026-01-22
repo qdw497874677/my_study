@@ -413,18 +413,6 @@ opencode
 
 子代理驱动
 
-oh-my-opencode
-https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
-
-opencode插件，功能配置集合。包含6个agent
-
-核心思想
-
-轻量化开发工作流插件superpowers中的子代理驱动skills
-https://github.com/obra/superpowers
-工作流:头脑风暴，工作区隔离,写计划，执行计划(子代理驱动，并行会话，评审，TDD)，完成
-特点
-TDD,两阶段审查
 
 如何实现
 技能库，核心能力封装成技能
@@ -456,7 +444,6 @@ fork新会话，基于文档交互
 使用SDD将信息从上下文卸载后，创建新会话
 
 
-superpowers中的
 
 
 
@@ -577,6 +564,17 @@ superpowers中的
 - cc兼容
 
 - 后台处理
+
+
+
+
+### superpowers
+https://github.com/obra/superpowers
+工作流:头脑风暴，工作区隔离,写计划，执行计划(子代理驱动，并行会话，评审，TDD)，完成
+特点
+TDD,两阶段审查
+
+
 
 作为基础能力
 
