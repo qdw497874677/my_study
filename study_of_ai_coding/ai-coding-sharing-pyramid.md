@@ -445,10 +445,11 @@ superpowers中的
 
 ### 复利工程（Compounding Engineering）
 
-
-从经验复用的角度看上下文管理，强调在ai coding中应该做好系统的长期记忆。
 核心思想：
 每次ai做事，都会让下一次ai做得更好。
+
+从经验复用的角度看上下文管理，强调在ai coding中应该做好系统的长期记忆。
+
 
 把ai coding相关的经验沉淀下来
 1. ai coding中的问题排查和解决
@@ -460,31 +461,35 @@ superpowers中的
 
 形式可以采用规则文件，skills等方式
 
-#### 复利内容
 
-##### ai coding中的自己产生的代码或者业务经验
 
+#### ai coding中的自己产生的代码或者业务经验
+
+##### 经验范围
 1. 踩坑修复。
 2. 方案选型。应用COLA结构。存储接口定义应该在domain层。写es实现应该放在基础设施层。junit使用4版本
 3. 高频问答。
+
+##### 实现方式
+1. 规则文件(AGENTS.md)
+2. skills(本地文件)
+3. mcp + 后端
+4. 混合
+
+##### 沉淀时机
+1. 出现错误
+2. review
 
 
 
 ##### 个人和团队在使用AI工具中的经验、工具
 1. 提示词
 2. coding agent的各种配置、插件
-3. 
-
-#### 实现载体
-1. 规则文件(AGENTS.md)
-2. skills(本地文件)
-3. mcp + 后端
-4. 混合
 
 
-#### 复用时机
-1. 出现错误
-2. review
+
+
+
 
 如何实现，工具自带，检索方式定义在全局规则，hook，subagent规则等等
 加载过程尽量不要占用主agent，规划阶段使用skill懒加载，review阶段使用hook+subagent+skill会话隔离
