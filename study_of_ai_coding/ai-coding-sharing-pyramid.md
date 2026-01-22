@@ -531,6 +531,23 @@ fork新会话，基于文档交互
 ### oh-my-opencode
 https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
 
+#### 核心能力
+- **智能体**：Sisyphus（主智能体，西西弗斯，永恒地将巨石推上山坡）、Prometheus（规划器）、Oracle（架构/调试）、Librarian（文档/代码搜索）、Explore（快速代码库 grep）、Multimodal Looker
+- **后台智能体**：像真正的开发团队一样并行运行多个智能体
+- **LSP & AST 工具**：重构、重命名、诊断、AST 感知代码搜索
+- **上下文注入**：自动注入 AGENTS.md、README.md、条件规则
+- **Claude Code 兼容性**：完整的钩子系统、命令、技能、智能体、MCP
+- **内置 MCP**：websearch (Exa)、context7 (文档)、grep_app (GitHub 搜索)
+- **会话工具**：列出、读取、搜索和分析会话历史
+- **生产力功能**：Ralph Loop、Todo Enforcer、Comment Checker、Think Mode 等
+
+特点：
+1. 拥抱多模型
+2. 随时调度后台subagent
+3. 工具齐全，开箱即用
+4. 兼容cc
+
+
 - 多智能体编排
 
 7+ specialized agents (Sisyphus, oracle, librarian, explore, frontend, document-writer, multimodal-looker) across 5 AI providers
@@ -548,21 +565,6 @@ https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
 ### superpowers
 https://github.com/obra/superpowers
 
-#### 核心能力
-- **智能体**：Sisyphus（主智能体，西西弗斯，永恒地将巨石推上山坡）、Prometheus（规划器）、Oracle（架构/调试）、Librarian（文档/代码搜索）、Explore（快速代码库 grep）、Multimodal Looker
-- **后台智能体**：像真正的开发团队一样并行运行多个智能体
-- **LSP & AST 工具**：重构、重命名、诊断、AST 感知代码搜索
-- **上下文注入**：自动注入 AGENTS.md、README.md、条件规则
-- **Claude Code 兼容性**：完整的钩子系统、命令、技能、智能体、MCP
-- **内置 MCP**：websearch (Exa)、context7 (文档)、grep_app (GitHub 搜索)
-- **会话工具**：列出、读取、搜索和分析会话历史
-- **生产力功能**：Ralph Loop、Todo Enforcer、Comment Checker、Think Mode 等
-
-特点：
-1. 拥抱多模型
-2. 随时调度后台subagent
-3. 工具齐全，开箱即用
-4. 兼容cc
 
 
 #### 如何实现
@@ -586,21 +588,16 @@ superpowers这个插件的设计就是按序加载，在opencode中使用find_sk
 #### 安装和使用
 
 安装：
-面向 LLM 智能体
-获取安装指南并按照说明操作：
-
-```shell
-curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md
+直接把下面内容扔给智能体：
 ```
-
-
+按照以下说明安装和配置 oh-my-opencode：
+https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md
+```
 https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md
 
-## 卸载
 
-配置：
+配置项：
 https://github.com/code-yeongyu/oh-my-opencode/blob/dev/docs/configurations.md
-
 
 
 
