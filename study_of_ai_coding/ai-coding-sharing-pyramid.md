@@ -557,8 +557,9 @@ TDD,两阶段审查
 2. 发现机制，通用的工具和提示词，用来发现和编排skill。
 3. 集成层，通过具体coding agent的原生机制来集成能力。
 
+通过元技能集成插件能力`using-superpowers/SKILL.md`。在会话开始时注入，并强制执行检查。
 
-### 
+#### 核心技能和工作流
 1. **brainstorming/SKILL.md** - 头脑风暴。设计阶段，输出到 `docs/plans/YYYY-MM-DD-topic-design.md`
 2. **using-git-worktrees/SKILL.md** - git工作区隔离。 新分支工作区隔离。
 3. **writing-plans/SKILL.md** - 实施计划，输出于 `docs/plans/YYYY-MM-DD-feature-name.md`
@@ -567,7 +568,7 @@ TDD,两阶段审查
 6. **requesting-code-review/SKILL.md** - codereview.两阶段审查（规范合规，代码质量）
 7. **finishing-a-development-branch/SKILL.md** - 结束收尾。合并/PR/保留/丢弃决策
 
-通过元技能集成插件能力`using-superpowers/SKILL.md`。在会话开始时注入，并强制执行检查。
+
 
 
 
