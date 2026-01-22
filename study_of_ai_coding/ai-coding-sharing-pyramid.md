@@ -547,6 +547,17 @@ https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
 
 ### superpowers
 https://github.com/obra/superpowers
+
+#### 核心能力
+- **智能体**：Sisyphus（主智能体）、Prometheus（规划器）、Oracle（架构/调试）、Librarian（文档/代码搜索）、Explore（快速代码库 grep）、Multimodal Looker
+- **后台智能体**：像真正的开发团队一样并行运行多个智能体
+- **LSP & AST 工具**：重构、重命名、诊断、AST 感知代码搜索
+- **上下文注入**：自动注入 AGENTS.md、README.md、条件规则
+- **Claude Code 兼容性**：完整的钩子系统、命令、技能、智能体、MCP
+- **内置 MCP**：websearch (Exa)、context7 (文档)、grep_app (GitHub 搜索)
+- **会话工具**：列出、读取、搜索和分析会话历史
+- **生产力功能**：Ralph Loop、Todo Enforcer、Comment Checker、Think Mode 等
+
 工作流:头脑风暴，工作区隔离,写计划，执行计划(子代理驱动，并行会话，评审，TDD)，完成
 特点
 TDD,两阶段审查
@@ -559,16 +570,19 @@ TDD,两阶段审查
 
 通过元技能集成插件能力`using-superpowers/SKILL.md`。在会话开始时注入，并强制执行检查。
 
-superpowers这个插件的设计就是按序加载，在opencode中使用find_skills才能看到它的skills，牺牲了一部分自主使用能力（成功率不是很高，依赖g），来降低工具冗余。
+superpowers这个插件的设计就是按序加载，在opencode中使用find_skills才能看到它的skills，牺牲了一部分自主使用能力（成功率不是很高，依赖更强的模型），来降低工具冗余。
 
 #### 核心技能和工作流
-1. **brainstorming/SKILL.md** - 头脑风暴。设计阶段，输出到 `docs/plans/YYYY-MM-DD-topic-design.md`
-2. **using-git-worktrees/SKILL.md** - git工作区隔离。 新分支工作区隔离。
-3. **writing-plans/SKILL.md** - 实施计划，输出于 `docs/plans/YYYY-MM-DD-feature-name.md`
+1. 头脑风暴。**brainstorming/SKILL.md** - 设计阶段，输出到 `docs/plans/YYYY-MM-DD-topic-design.md`
+2. git工作区隔离。 **using-git-worktrees/SKILL.md** - 新分支工作区隔离。
+3. **writing-plans/SKILL.md** - 实施计划。输出于 `docs/plans/YYYY-MM-DD-feature-name.md`
 4. **subagent-driven-development/SKILL.md** or **executing-plans/SKILL.md** - 带审查循环的执行
 5. **test-driven-development/SKILL.md** - TDD开发。红绿重构执行。
 6. **requesting-code-review/SKILL.md** - codereview.两阶段审查（规范合规，代码质量）
 7. **finishing-a-development-branch/SKILL.md** - 结束收尾。合并/PR/保留/丢弃决策
+
+#### 安装
+
 
 
 
