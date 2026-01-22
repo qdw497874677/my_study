@@ -437,7 +437,7 @@ https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
 
 opencode插件，功能配置集合。包含6个agent
 
-核心思量
+核心思想
 
 轻量化开发工作流插件superpowers中的子代理驱动skills
 https://github.com/obra/superpowers
