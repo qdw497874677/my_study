@@ -201,8 +201,8 @@ Anthropic定义的skills就是智能体可以识别的可复用资产。体现�
 
 
 #### Plugins 
-上述配置打包在一起。
-
+打包在一起的配置。
+例如rah-loop
 
 ## 优化思路
 
@@ -418,10 +418,37 @@ https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
 
 opencode插件，功能配置集合。包含6个agent
 
-核心思量
+核心思想
 
 轻量化开发工作流插件superpowers中的子代理驱动skills
 https://github.com/obra/superpowers
+工作流:头脑风暴，工作区隔离,写计划，执行计划(子代理驱动，并行会话，评审，TDD)，完成
+特点
+TDD,两阶段审查
+
+如何实现
+技能库，核心能力封装成技能
+发现机制，通用的工具和提示词，用来发现和编排技能。
+集成层，通过具体coding agent的原生机制来接入插件。
+1. **brainstorming/SKILL.md** - Design phase, outputs to `docs/plans/YYYY-MM-DD-topic-design.md`  
+    **头脑风暴/SKILL.md** - 设计阶段，输出到 `docs/plans/YYYY-MM-DD-topic-design.md`
+2. **using-git-worktrees/SKILL.md** - Workspace isolation on new branch  
+    **using-git-worktrees/SKILL.md** - 新分支工作区隔离
+3. **writing-plans/SKILL.md** - Implementation plan, outputs to `docs/plans/YYYY-MM-DD-feature-name.md`  
+    **writing-plans/SKILL.md** - 实施计划，输出于 `docs/plans/YYYY-MM-DD-feature-name.md`
+4. **subagent-driven-development/SKILL.md** or **executing-plans/SKILL.md** - Execution with review loops  
+    **subagent-driven-development/SKILL.md** 或 **executing-plans/SKILL.md** - 带审查循环的执行
+    
+    
+**test-driven-development/SKILL.md** - RED-GREEN-REFACTOR enforcement  
+    **测试驱动开发/SKILL.md** - 红绿重构执行
+5. **requesting-code-review/SKILL.md** - Two-stage review (spec compliance, code quality)  
+    **requesting-code-review/SKILL.md** - 两阶段审查（规范合规，代码质量）
+6. **finishing-a-development-branch/SKILL.md** - Merge/PR/keep/discard decision  
+    **完成开发分支/SKILL.md** - 合并/PR/保留/丢弃决策
+
+The `using-superpowers/SKILL.md`
+元技能在会话开始时注入，并强制执行检查
 
 
 fork新会话，基于文档交互
@@ -435,6 +462,17 @@ superpowers中的
 
 #### 不要过多约束
 相对少的影响细节控制，比如命名。限定大的框架。
+
+
+
+### 评审
+
+多角度评审
+架构，安全，简洁代码等等角度
+参考思考帽，从不同角度，产生明确，正确的计划，作为执行标准和约束
+
+
+计划时评审，实施后也评审
 
 
 ### 复利工程（Compounding Engineering）
@@ -494,10 +532,6 @@ superpowers中的
 好代码本身也是经验，好代码本身可以按需加载的上下文。
 
 
-参考cc之父工作流
-740 万围观！Claude Code 之父的工作流火了 740 万围... http://xhslink.com/o/2WnLEAbiXoq 
-复制后打开【小红书】查看笔记！
-
 
 ### 总结
 
@@ -507,12 +541,13 @@ superpowers中的
 	- 像对待内存一样对待上下文。
 - 文件系统是简单高效的。
 	- 可以简单的创建、检索、执行。
-- 卸载很关键。
+- 卸载。缓解上下文吃紧。
 	- 当前不用了，或者为了其他会话准备，就需要及时卸载出来。就像内存数据持久化到硬盘。
 	- 短期内，虽然上下文或者内存不断提升，这种机制可以用来平衡成本，并且在不同规模下都是合理高效的。
-- 按需加载。
+- 按需加载。加载上下文的默认策略。
 	- 可以依赖agentic能力，可以工程化。为了减少上下文污染。
 
+文件操作不一定是ai交互最终形态，可能是当下模型能力，成本，可靠性这些约束下的，综合考虑的选择。没有做更高的抽象层，用到传统的文件系统，就够了，模型能操作，人也能操作。
 
 
 在ai coding中，当前我理解的几个关键点：
@@ -530,6 +565,30 @@ superpowers中的
 1. claude code + openspec
 2. claude code + superpowers
 3. opencode + oh-my-opencode + superpowers
+
+### oh-my-opencode
+- 多智能体编排
+
+7+ specialized agents (Sisyphus, oracle, librarian, explore, frontend, document-writer, multimodal-looker) across 5 AI providers
+
+- 高级工具
+
+
+- cc兼容
+
+- 后台处理
+
+作为基础能力
+
+
+superpowers作为项目开发工作流
+
+根据场景互相补充。
+
+
+
+
+
 
 
 superpowers这个插件的设计就是按序加载，在opencode中使用find_skills才能看到它的skills，牺牲了一部分自主使用能力（成功率不是很高），来降低工具冗余。
