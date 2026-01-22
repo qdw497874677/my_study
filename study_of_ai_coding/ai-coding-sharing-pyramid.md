@@ -576,8 +576,15 @@ superpowers中的
 
 ### oh-my-opencode
 - 多智能体编排
+
 7+ specialized agents (Sisyphus, oracle, librarian, explore, frontend, document-writer, multimodal-looker) across 5 AI providers
 
+- 高级工具
+
+
+- cc兼容
+
+- 
 
 
 
