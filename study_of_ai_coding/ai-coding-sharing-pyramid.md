@@ -585,6 +585,19 @@ superpowers这个插件的设计就是按序加载，在opencode中使用find_sk
 
 #### 安装和使用
 
+安装：
+面向 LLM 智能体
+获取安装指南并按照说明操作：
+
+```shell
+curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md
+```
+
+
+https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md
+
+## 卸载
+
 配置：
 https://github.com/code-yeongyu/oh-my-opencode/blob/dev/docs/configurations.md
 
