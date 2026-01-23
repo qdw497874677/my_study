@@ -632,4 +632,5 @@ https://github.com/slopus/happy
 ## 参考文献
 
 1. https://manus.im/zh-cn/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus
-2. 
+2. https://cursor.com/cn/blog/dynamic-context-discovery
+3. https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents
