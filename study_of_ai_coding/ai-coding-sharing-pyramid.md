@@ -561,11 +561,9 @@ $ openspec validate add-profile-filters     # Validate spec formatting
 $ openspec show add-profile-filters         # Review proposal, tasks, and spec delta
 ```
 
-#### 3. Refine the Specs
+#### 3. 优化
 
-[](https://github.com/Fission-AI/OpenSpec?tab=readme-ov-file#3-refine-the-specs)
-
-Iterate on the specifications until they match your needs:
+直接对话，让agent来修改提案
 
 ```
 You: Can you add acceptance criteria for the role and team filters?
@@ -574,9 +572,7 @@ AI:  I'll update the spec delta with scenarios for role and team filters.
      *Edits openspec/changes/add-profile-filters/specs/profile/spec.md and tasks.md.*
 ```
 
-#### 4. Implement the Change
-
-[](https://github.com/Fission-AI/OpenSpec?tab=readme-ov-file#4-implement-the-change)
+#### 4. 实施变更
 
 Once specs look good, start implementation:
 
@@ -589,9 +585,7 @@ AI:  I'll work through the tasks in the add-profile-filters change.
      *Marks tasks complete: Task 1.1 ✓, Task 1.2 ✓, Task 2.1 ✓...*
 ```
 
-#### 5. Archive the Completed Change
-
-[](https://github.com/Fission-AI/OpenSpec?tab=readme-ov-file#5-archive-the-completed-change)
+#### 5. 归档变更
 
 After implementation is complete, archive the change:
 
@@ -611,9 +605,6 @@ Or run the command yourself in terminal:
 ```shell
 $ openspec archive add-profile-filters --yes  # Archive the completed change without prompts
 ```
-
-**Note:** Tools with native slash commands (Claude Code, CodeBuddy, Cursor, Codex, Qoder, RooCode) can use the shortcuts shown. All other tools work with natural language requests to "create an OpenSpec proposal", "apply the OpenSpec change", or "archive the change".
-
 
 
 
@@ -654,6 +645,7 @@ https://github.com/code-yeongyu/oh-my-opencode/blob/dev/docs/configurations.md
 
 
 ### superpowers
+
 https://github.com/obra/superpowers
 
 
