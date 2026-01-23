@@ -609,6 +609,7 @@ $ openspec archive add-profile-filters --yes  # Archive the completed change wit
 
 
 ### oh-my-opencode
+opencode的开箱即用的强化插件。
 https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
 
 #### 核心能力
@@ -645,7 +646,7 @@ https://github.com/code-yeongyu/oh-my-opencode/blob/dev/docs/configurations.md
 
 
 ### superpowers
-
+轻量版的coding工作流/技能库。
 https://github.com/obra/superpowers
 
 
