@@ -627,3 +627,9 @@ Claude Code/Codex的移动端
 https://github.com/slopus/happy
 
 
+
+
+## 参考文献
+
+1. https://manus.im/zh-cn/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus
+2. 
