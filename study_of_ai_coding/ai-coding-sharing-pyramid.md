@@ -204,7 +204,7 @@ Anthropic定义的skills就是智能体可以识别的可复用资产。
 
 #### Plugins 
 打包在一起的配置。
-例如loop，通过两个
+例如ralph-loop，通过commands和hook，实现对一个目标不断循环迭代的开发模式。
 https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop
 
 
