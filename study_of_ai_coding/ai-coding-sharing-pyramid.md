@@ -204,7 +204,7 @@ Anthropic定义的skills就是智能体可以识别的可复用资产。
 
 #### Plugins 
 打包在一起的配置。
-例如rah-loop
+例如loop
 
 ## 优化思路
 
