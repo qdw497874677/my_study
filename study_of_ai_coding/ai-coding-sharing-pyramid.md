@@ -336,31 +336,6 @@ https://github.com/Fission-AI/OpenSpec
 
 ```
 ┌────────────────────┐
-│ 起草变更提案       │
-│ (Draft Change      │
-│  Proposal)         │
-└────────┬───────────┘
-         │ 与 AI 共享意图
-         ▼
-┌────────────────────┐
-│ 评审与对齐         │
-│ (Review & Align)   │◀──── 反馈循环 ──────┐
-│ (编辑规格/任务)    │                     │
-└────────┬───────────┘                     │
-         │ 获批方案                          │
-         ▼                                   │
-┌────────────────────┐                      │
-│ 执行任务           │──────────────────────┘
-│ (AI 编写代码)      │
-└────────┬───────────┘
-         │ 发布变更
-         ▼
-┌────────────────────┐
-│ 归档并更新         │
-│ 规格 (源文档)      │
-└────────────────────┘
-
-┌────────────────────┐
 │ Draft Change       │起草变更提案
 │ Proposal           │
 └────────┬───────────┘
@@ -374,19 +349,15 @@ https://github.com/Fission-AI/OpenSpec
          ▼                                      │
 ┌────────────────────┐                          │
 │ Implement Tasks    │──────────────────────────┘
-│ (AI writes code)   │执行任务
+│ (AI writes code)   │执行任务(AI 编写代码)
 └────────┬───────────┘
          │ ship the change.发布变更
          ▼
 ┌────────────────────┐
-│ Archive & Update   │归档并更新
+│ Archive & Update   │归档并更新(源文档)
 │ Specs (source)     │
 └────────────────────┘
 
-1. Draft a change proposal that captures the spec updates you want.
-2. Review the proposal with your AI assistant until everyone agrees.
-3. Implement tasks that reference the agreed specs.
-4. Archive the change to merge the approved updates back into the source-of-truth specs.
 ```
 
 
@@ -562,6 +533,8 @@ fork新会话，基于文档交互
 ### openspec
 https://github.com/Fission-AI/OpenSpec
 
+
+#### 安装
 
 
 
