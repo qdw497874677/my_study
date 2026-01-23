@@ -441,20 +441,10 @@ fork新会话，基于文档交互
 核心思想：
 每次ai做完事，都会让下一次的ai做得更好。
 
-从经验复用的角度看上下文管理，强调在ai coding中应该做好系统的长期记忆。
-
 
 把ai coding相关的经验沉淀下来
-1. ai coding中的问题排查和解决
+1. ai coding中的问题排查和解决，维护优质的长期记忆
 2. 开发者使用工具提示词、工具配置、插件配置等等
-3. 
-
-
-将经验（长期记忆）沉淀下来。
-
-形式可以采用规则文件，skills等方式
-
-
 
 #### ai coding中的自己产生的代码或者业务经验
 
@@ -478,15 +468,6 @@ fork新会话，基于文档交互
 ##### 个人和团队在使用AI工具中的经验、工具
 1. 提示词
 2. coding agent的各种配置、插件
-
-
-
-
-
-
-如何实现，工具自带，检索方式定义在全局规则，hook，subagent规则等等
-加载过程尽量不要占用主agent，规划阶段使用skill懒加载，review阶段使用hook+subagent+skill会话隔离
-
 
 
 
@@ -752,4 +733,15 @@ Claude Code/Codex的移动端
 ![[Pasted image 20260122200132.png]]
 https://github.com/slopus/happy
 
+
+### skills库
+
+官方skills实例
+https://github.com/anthropics/skills
+
+优秀skills库
+https://github.com/ComposioHQ/awesome-claude-skills
+
+obsidian skills
+https://github.com/kepano/obsidian-skills
 
