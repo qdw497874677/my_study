@@ -528,6 +528,15 @@ fork新会话，基于文档交互
 2. claude code + superpowers
 3. opencode + oh-my-opencode + superpowers
 
+
+
+
+### openspec
+
+
+
+
+
 ### oh-my-opencode
 https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
 
@@ -602,11 +611,7 @@ superpowers这个插件的设计就是按序加载，在opencode中使用find_sk
 /plugin install superpowers@superpowers-marketplace
 ```
 
-### Verify Installation
-
-[](https://github.com/obra/superpowers#verify-installation)
-
-Check that commands appear:
+验证
 
 ```shell
 /help
@@ -619,11 +624,8 @@ Check that commands appear:
 # /superpowers:execute-plan - Execute plan in batches
 ```
 
-### Codex
-
-[](https://github.com/obra/superpowers#codex)
-
-Tell Codex:
+##### Codex
+直接告诉codex：
 
 ```
 Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.codex/INSTALL.md
@@ -631,11 +633,8 @@ Fetch and follow instructions from https://raw.githubusercontent.com/obra/superp
 
 **Detailed docs:** [docs/README.codex.md](https://github.com/obra/superpowers/blob/main/docs/README.codex.md)
 
-### OpenCode
-
-[](https://github.com/obra/superpowers#opencode)
-
-Tell OpenCode:
+##### OpenCode
+直接告诉opencode
 
 ```
 Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.opencode/INSTALL.md
