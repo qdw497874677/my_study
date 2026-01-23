@@ -218,10 +218,9 @@ Anthropic定义的skills就是智能体可以识别的可复用资产。体现�
 
 #### 精简内容
 
-会话里
 ##### 遮蔽
-移除无用信息。比如很多工具的返回都是冗余的。
-例如使用head tail等等这些查看部分的工具来替代读取整个文件
+移除无用信息。很多工具的返回都是冗余的。
+例如使用head tail等等这些查看部分的工具试探，替代直接读取整个文件。通过hook对结果处理（卸载到文件）。
 
 ##### 压缩
 - 总结摘要。
@@ -231,25 +230,33 @@ Anthropic定义的skills就是智能体可以识别的可复用资产。体现�
 
 ##### 动态装卸载
 
-动态装载，渐进式披露，懒加载
-最常见的应用就是skills
-两种方式，工程上直接装载，比如工具信息，全局规则(长期记忆)等等。模型自装载，比如skills的内容，spec文档等等。
+1. 动态装载，渐进式披露，懒加载，按需加载
+规则文件(CLAUDE.md、AGENTS.md)、skills。
+并且尝试让更多的信息具备按需加载的能力，比如工具、mcp等等。
 
-动态卸载
+大部分的实现方式都是：agentic + 沙箱
+
+2. 动态卸载
 解决在清理会话上下文时也能够保留，高质量或者可溯源的上下文内容。
 常见的应用有，写入长期记忆，沉淀为可复用文件等等
 
-将更多的上下文内容都组织成可以渐进式披露的形式。可以是全局规则中的文件分层索引，也可以是skills。
+除了skills，各家大概都是这个方向(manus、cursor)。尤其是在coding领域，代码文件本身就是动态装载卸载的上下文。沙箱模糊了一部分上下文系统和项目本身。
 
 
-会话间
-##### 隔离
-subagent、新session
+#### 拆分隔离
+涉及到两个维度：
+1. 拆解问题。大项目拆成小项目，大模块拆成小模块，大方法拆成小方法。
+2. 单问题的执行拆解。
+	1. subagent
+	2. 新会话
 
-涉及到新的问题，隔离之后，如何高效通信和交互。
+
+涉及到新的问题，隔离之后，如何传递上下文。
+1. 提示词
+2. 基于文件+agentic
 
 直接探索
-沙箱模糊了一部分上下文系统和项目本身。
+
 1. 用项目代码本身去交互
 	1. 本身写代码，和我们开发者写代码一样。代码本身不只是跑业务，也是为了告诉后续开发者我的实现思路，本身就有一定的沟通交流的含义在。就像简介代码里讲的，代码要可以自解释。如果代码不可读，起码从软件工程角度以及长期来说，他不是高效率的好代码。
 	2. 只不过每一个空的上下文介入时，需要一个检索收集过程，这个过程针对的是整个项目代码。
@@ -260,43 +267,21 @@ subagent、新session
 
 #### 提升质量
 
+##### 先做计划和澄清
 开始前澄清所有细节。
 先计划好再实施。其中计划包含大量人类结束，来减少随机性
 
-
-
-
-#### 软件工程、架构方法、开发范式
-传统方法本身也是为了提高项目的迭代效率以及可读性可维护性。和上下文管理效率不谋而合。
-
-我觉得本质上都在从这几个方面来保证对于一个工程项目问题的，
-- 子问题拆分
-- 流程约束
-- 沉淀可复用资产
-
-
-
-
-
-拆分子问题
-	- 深度、广度
-- 先澄清后实施
-- 可复用
-
-
-##### claude code 的plan模式
-
+例如claude code中的plan模式。
 1. 使用plan模式，这个为只读，并且只能创建和澄清需求计划。计划文件存储在默认路径文件内。
 2. 从plan模式切换到正常模式，根据当前会话的最新计划进行实施。
 
 
-##### SDD插件
 
+##### 范式约束
+传统软件工程相关领域，也有很多机制来限制项目的复杂度、规范性、可读性等等。和ai coding需要做的上下文管理有些重叠可借鉴的部分。
+
+##### SDD
 规范驱动开发（Spec-Driven Development, SDD）
-SDD
-SDD插件
-B
-speckit
 
 ##### SpecKit：工程化治理框架
 **定位**：GitHub开源的规范驱动开发框架
@@ -310,12 +295,7 @@ speckit
 测试优先 → 强制 TDD，不可协商地要求先写测试
 ```
 
-核心流程：
-```
-Constitution(宪章) → Specify(规范) → Plan(计划) → Tasks(任务)  → Implement(实施) 
-```
-
-**七步工作流**：
+**核心流程：
 ```bash
 /speckit.constitution  → 定义治理原则（九条宪章）
 /speckit.specify      → 创建功能规范（spec.md）
@@ -326,18 +306,8 @@ Constitution(宪章) → Specify(规范) → Plan(计划) → Tasks(任务)  →
 /speckit.implement    → 执行实现（代码与测试）
 ```
 
-**九条宪章质量门控**：
-| 条款 | 名称 | 约束类型 | 影响 |
-|------|------|---------|------|
-| I | Library-First原则 | 塑造性 | 指导架构设计 |
-| II | CLI接口强制 | 塑造性 | 要求命令行接口 |
-| III | 测试优先开发 | 塑造性 | 强制TDD |
-| IV | 文档优先 | 塑造性 | 实现前需完善文档 |
-| V | 功能隔离 | 塑造性 | 强制关注点分离 |
-| VI | 版本控制规范 | 塑造性 | 强制Git工作流 |
-| VII | 简约门控 | 前置门控 | 复杂度控制 |
-| VIII | 反抽象门控 | 前置门控 | 禁止过度抽象 |
-| IX | 集成优先门控 | 前置门控 | 缺少测试阻断 |
+9 条不可变的架构原则（库优先、CLI 接口、测试优先、简洁性、反抽象...），7 层 LLM 输出约束机制，防止过早实现、强制标记不确定性、结构化自检...
+
 
 ##### OpenSpec：轻量化审计工具
 
@@ -355,29 +325,28 @@ https://github.com/Fission-AI/OpenSpec
 
 ```
 ┌────────────────────┐
-│ 起草变更提案       │
-│ (Draft Change      │
-│  Proposal)         │
+│ Draft Change       │起草变更提案
+│ Proposal           │
 └────────┬───────────┘
-         │ 与 AI 共享意图
+         │ share intent with your AI. 与 AI 共享意图
          ▼
 ┌────────────────────┐
-│ 评审与对齐         │
-│ (Review & Align)   │◀──── 反馈循环 ──────┐
-│ (编辑规格/任务)    │                     │
-└────────┬───────────┘                     │
-         │ 获批方案                          │
-         ▼                                   │
-┌────────────────────┐                      │
-│ 执行任务           │──────────────────────┘
-│ (AI 编写代码)      │
+│ Review & Align     │评审与对齐  
+│ (edit specs/tasks) │◀──── feedback loop ──────┐反馈循环
+└────────┬───────────┘                          │
+         │ approved plan. 获批方案                │
+         ▼                                      │
+┌────────────────────┐                          │
+│ Implement Tasks    │──────────────────────────┘
+│ (AI writes code)   │执行任务(AI 编写代码)
 └────────┬───────────┘
-         │ 发布变更
+         │ ship the change.发布变更
          ▼
 ┌────────────────────┐
-│ 归档并更新         │
-│ 规格 (源文档)      │
+│ Archive & Update   │归档并更新(源文档)
+│ Specs (source)     │
 └────────────────────┘
+
 ```
 
 
@@ -425,59 +394,6 @@ openspec 的 Delta 机制设计得很巧妙：不同于直接存储完整的"未
 都会涉及到一个问题。spec文档的大小和约束程度不好平衡，太轻的没有达到约束的效果，太重的文档的量级堪比代码。
 
 
-opencode
-
-##### 任务委派/会话隔离
-
-
-子代理驱动
-
-oh-my-opencode
-https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
-
-opencode插件，功能配置集合。包含6个agent
-
-核心思想
-
-轻量化开发工作流插件superpowers中的子代理驱动skills
-https://github.com/obra/superpowers
-工作流:头脑风暴，工作区隔离,写计划，执行计划(子代理驱动，并行会话，评审，TDD)，完成
-特点
-TDD,两阶段审查
-
-如何实现
-技能库，核心能力封装成技能
-发现机制，通用的工具和提示词，用来发现和编排技能。
-集成层，通过具体coding agent的原生机制来接入插件。
-1. **brainstorming/SKILL.md** - Design phase, outputs to `docs/plans/YYYY-MM-DD-topic-design.md`  
-    **头脑风暴/SKILL.md** - 设计阶段，输出到 `docs/plans/YYYY-MM-DD-topic-design.md`
-2. **using-git-worktrees/SKILL.md** - Workspace isolation on new branch  
-    **using-git-worktrees/SKILL.md** - 新分支工作区隔离
-3. **writing-plans/SKILL.md** - Implementation plan, outputs to `docs/plans/YYYY-MM-DD-feature-name.md`  
-    **writing-plans/SKILL.md** - 实施计划，输出于 `docs/plans/YYYY-MM-DD-feature-name.md`
-4. **subagent-driven-development/SKILL.md** or **executing-plans/SKILL.md** - Execution with review loops  
-    **subagent-driven-development/SKILL.md** 或 **executing-plans/SKILL.md** - 带审查循环的执行
-    
-    
-**test-driven-development/SKILL.md** - RED-GREEN-REFACTOR enforcement  
-    **测试驱动开发/SKILL.md** - 红绿重构执行
-5. **requesting-code-review/SKILL.md** - Two-stage review (spec compliance, code quality)  
-    **requesting-code-review/SKILL.md** - 两阶段审查（规范合规，代码质量）
-6. **finishing-a-development-branch/SKILL.md** - Merge/PR/keep/discard decision  
-    **完成开发分支/SKILL.md** - 合并/PR/保留/丢弃决策
-
-The `using-superpowers/SKILL.md`
-元技能在会话开始时注入，并强制执行检查
-
-
-fork新会话，基于文档交互
-
-使用SDD将信息从上下文卸载后，创建新会话
-
-
-superpowers中的
-
-
 
 #### 不要过多约束
 相对少的影响细节控制，比如命名。限定大的框架。
@@ -500,20 +416,10 @@ superpowers中的
 核心思想：
 每次ai做完事，都会让下一次的ai做得更好。
 
-从经验复用的角度看上下文管理，强调在ai coding中应该做好系统的长期记忆。
-
 
 把ai coding相关的经验沉淀下来
-1. ai coding中的问题排查和解决
-2. 开发者使用工具提示词、工具配置、插件配置等等
-3. 
-
-
-将经验（长期记忆）沉淀下来。
-
-形式可以采用规则文件，skills等方式
-
-
+1. ai coding中的问题排查和解决，维护优质的长期记忆。
+2. 开发者使用工具提示词、工具配置、插件配置等等。
 
 #### ai coding中的自己产生的代码或者业务经验
 
@@ -537,15 +443,6 @@ superpowers中的
 ##### 个人和团队在使用AI工具中的经验、工具
 1. 提示词
 2. coding agent的各种配置、插件
-
-
-
-
-
-
-如何实现，工具自带，检索方式定义在全局规则，hook，subagent规则等等
-加载过程尽量不要占用主agent，规划阶段使用skill懒加载，review阶段使用hook+subagent+skill会话隔离
-
 
 
 
@@ -576,6 +473,10 @@ superpowers中的
 - 计划 -> 实施 -> 评审 -> 复利
 - 珍惜上下文
 - 在不同规模的场景中，平衡成本和复杂度，选择适合的方式
+	- 探索代码库、deepresearch
+	- 开发demo，实现MVP快速验证
+	- 从零构建产品
+	- 开发历史项目需求
 
 
 这些是变化中的基本不变的部分。
@@ -586,17 +487,195 @@ superpowers中的
 2. claude code + superpowers
 3. opencode + oh-my-opencode + superpowers
 
+
+
+
+### openspec
+https://github.com/Fission-AI/OpenSpec
+
+
+#### 安装
+https://github.com/Fission-AI/OpenSpec?tab=readme-ov-file#install--initialize
+
+#### 使用
+https://github.com/Fission-AI/OpenSpec?tab=readme-ov-file#create-your-first-change
+##### 1. 起草提案
+
+Start by asking your AI to create a change proposal:
+
+```
+You: Create an OpenSpec change proposal for adding profile search filters by role and team
+     (Shortcut for tools with slash commands: /openspec:proposal Add profile search filters)
+
+AI:  I'll create an OpenSpec change proposal for profile filters.
+     *Scaffolds openspec/changes/add-profile-filters/ with proposal.md, tasks.md, spec deltas.*
+```
+
+#### 2. 验证和评审
+
+Check that the change was created correctly and review the proposal:
+
+```shell
+$ openspec list                             # Confirm the change folder exists
+$ openspec validate add-profile-filters     # Validate spec formatting
+$ openspec show add-profile-filters         # Review proposal, tasks, and spec delta
+```
+
+#### 3. 优化
+
+直接对话，让agent来修改提案
+
+```
+You: Can you add acceptance criteria for the role and team filters?
+
+AI:  I'll update the spec delta with scenarios for role and team filters.
+     *Edits openspec/changes/add-profile-filters/specs/profile/spec.md and tasks.md.*
+```
+
+#### 4. 实施变更
+
+Once specs look good, start implementation:
+
+```
+You: The specs look good. Let's implement this change.
+     (Shortcut for tools with slash commands: /openspec:apply add-profile-filters)
+
+AI:  I'll work through the tasks in the add-profile-filters change.
+     *Implements tasks from openspec/changes/add-profile-filters/tasks.md*
+     *Marks tasks complete: Task 1.1 ✓, Task 1.2 ✓, Task 2.1 ✓...*
+```
+
+#### 5. 归档变更
+
+After implementation is complete, archive the change:
+
+```
+AI:  All tasks are complete. The implementation is ready.
+
+You: Please archive the change
+     (Shortcut for tools with slash commands: /openspec:archive add-profile-filters)
+
+AI:  I'll archive the add-profile-filters change.
+    *Runs: openspec archive add-profile-filters --yes*
+     ✓ Change archived successfully. Specs updated. Ready for the next feature!
+```
+
+Or run the command yourself in terminal:
+
+```shell
+$ openspec archive add-profile-filters --yes  # Archive the completed change without prompts
+```
+
+
+
 ### oh-my-opencode
-- 多智能体编排
+opencode的开箱即用的强化插件。
+https://github.com/code-yeongyu/oh-my-opencode/blob/dev/README.zh-cn.md
 
-7+ specialized agents (Sisyphus, oracle, librarian, explore, frontend, document-writer, multimodal-looker) across 5 AI providers
+#### 核心能力
+- **智能体**：Sisyphus（主智能体，西西弗斯，永恒地将巨石推上山坡）、Prometheus（规划器）、Oracle（架构/调试）、Librarian（文档/代码搜索）、Explore（快速代码库 grep）、Multimodal Looker
+- **后台智能体**：像真正的开发团队一样并行运行多个智能体
+- **LSP & AST 工具**：重构、重命名、诊断、AST 感知代码搜索
+- **上下文注入**：自动注入 AGENTS.md、README.md、条件规则
+- **Claude Code 兼容性**：完整的钩子系统、命令、技能、智能体、MCP
+- **内置 MCP**：websearch (Exa)、context7 (文档)、grep_app (GitHub 搜索)
+- **会话工具**：列出、读取、搜索和分析会话历史
+- **生产力功能**：Ralph Loop、Todo Enforcer、Comment Checker、Think Mode 等
 
-- 高级工具
+特点：
+1. 拥抱多模型
+2. 随时调度后台subagent
+3. 工具齐全，开箱即用
+4. 兼容cc
+
+#### 安装和使用
+
+安装：
+直接把下面内容扔给智能体：
+```
+按照以下说明安装和配置 oh-my-opencode：
+https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md
+```
+https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/refs/heads/master/docs/guide/installation.md
 
 
-- cc兼容
+配置项：
+https://github.com/code-yeongyu/oh-my-opencode/blob/dev/docs/configurations.md
 
-- 后台处理
+
+
+
+### superpowers
+轻量版的coding工作流/技能库。
+https://github.com/obra/superpowers
+
+
+#### 如何实现
+1. 技能库，核心能力封装成skill。
+2. 发现机制，通用的工具和提示词，用来发现和编排skill。
+3. 集成层，通过具体coding agent的原生机制来集成能力。
+
+通过元技能集成插件能力`using-superpowers/SKILL.md`。在会话开始时注入，并强制执行检查。
+
+superpowers这个插件的设计就是按序加载，在opencode中使用find_skills才能看到它的skills，牺牲了一部分自主使用能力（成功率不是很高，依赖更强的模型），来降低工具冗余。
+
+#### 核心技能和工作流
+1. 头脑风暴。**brainstorming/SKILL.md** - 设计阶段，输出到 `docs/plans/YYYY-MM-DD-topic-design.md`
+2. git工作区隔离。 **using-git-worktrees/SKILL.md** - 新分支工作区隔离。
+3. 编写计划。**writing-plans/SKILL.md** - 输出于 `docs/plans/YYYY-MM-DD-feature-name.md`
+4. 子代理驱动开发。**subagent-driven-development/SKILL.md** or **executing-plans/SKILL.md** - 每项任务执行后，使用双阶段评估(规格合规、代码质量)
+5. TDD测试驱动开发。**test-driven-development/SKILL.md** - 在实施过程中进行激活。执行 RED-GREEN-REFACTOR:编写失败测试,观看失败,编写最小代码,观看通过,提交。
+6. 代码评审。**requesting-code-review/SKILL.md** - 两阶段审查（规范合规，代码质量）
+7. 完成开发分支。**finishing-a-development-branch/SKILL.md** - 结束收尾。合并/PR/保留/丢弃决策
+
+
+#### 安装
+##### Claude Code (通过插件市场)
+
+插件市场中添加插件
+
+```shell
+/plugin marketplace add obra/superpowers-marketplace
+```
+
+安装插件
+
+```shell
+/plugin install superpowers@superpowers-marketplace
+```
+
+验证
+
+```shell
+/help
+```
+
+```
+# Should see:
+# /superpowers:brainstorm - Interactive design refinement
+# /superpowers:write-plan - Create implementation plan
+# /superpowers:execute-plan - Execute plan in batches
+```
+
+##### Codex
+直接告诉codex：
+
+```
+Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.codex/INSTALL.md
+```
+
+**Detailed docs:** [docs/README.codex.md](https://github.com/obra/superpowers/blob/main/docs/README.codex.md)
+
+##### OpenCode
+直接告诉opencode
+
+```
+Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.opencode/INSTALL.md
+```
+
+**Detailed docs:** [docs/README.opencode.md](https://github.com/obra/superpowers/blob/main/docs/README.opencode.md)
+
+
 
 作为基础能力
 
@@ -608,10 +687,13 @@ superpowers作为项目开发工作流
 
 
 
+![[Pasted image 20260123073554.png]]
 
 
 
-superpowers这个插件的设计就是按序加载，在opencode中使用find_skills才能看到它的skills，牺牲了一部分自主使用能力（成功率不是很高），来降低工具冗余。
+
+
+
 
 ## 相关分享
 
@@ -626,4 +708,15 @@ Claude Code/Codex的移动端
 ![[Pasted image 20260122200132.png]]
 https://github.com/slopus/happy
 
+
+### skills库
+
+官方skills实例
+https://github.com/anthropics/skills
+
+优秀skills库
+https://github.com/ComposioHQ/awesome-claude-skills
+
+obsidian skills
+https://github.com/kepano/obsidian-skills
 
