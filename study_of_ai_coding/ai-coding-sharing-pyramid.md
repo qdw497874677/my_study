@@ -359,6 +359,34 @@ https://github.com/Fission-AI/OpenSpec
 │ 归档并更新         │
 │ 规格 (源文档)      │
 └────────────────────┘
+
+┌────────────────────┐
+│ Draft Change       │起草变更提案
+│ Proposal           │
+└────────┬───────────┘
+         │ share intent with your AI. 与 AI 共享意图
+         ▼
+┌────────────────────┐
+│ Review & Align     │评审与对齐  
+│ (edit specs/tasks) │◀──── feedback loop ──────┐反馈循环
+└────────┬───────────┘                          │
+         │ approved plan. 获批方案                │
+         ▼                                      │
+┌────────────────────┐                          │
+│ Implement Tasks    │──────────────────────────┘
+│ (AI writes code)   │执行任务
+└────────┬───────────┘
+         │ ship the change.发布变更
+         ▼
+┌────────────────────┐
+│ Archive & Update   │归档并更新
+│ Specs (source)     │
+└────────────────────┘
+
+1. Draft a change proposal that captures the spec updates you want.
+2. Review the proposal with your AI assistant until everyone agrees.
+3. Implement tasks that reference the agreed specs.
+4. Archive the change to merge the approved updates back into the source-of-truth specs.
 ```
 
 
@@ -532,6 +560,7 @@ fork新会话，基于文档交互
 
 
 ### openspec
+https://github.com/Fission-AI/OpenSpec
 
 
 
