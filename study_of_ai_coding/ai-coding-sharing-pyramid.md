@@ -535,6 +535,84 @@ https://github.com/Fission-AI/OpenSpec
 
 
 #### 安装
+https://github.com/Fission-AI/OpenSpec?tab=readme-ov-file#install--initialize
+
+#### 使用
+https://github.com/Fission-AI/OpenSpec?tab=readme-ov-file#create-your-first-change
+##### 1. 起草提案
+
+Start by asking your AI to create a change proposal:
+
+```
+You: Create an OpenSpec change proposal for adding profile search filters by role and team
+     (Shortcut for tools with slash commands: /openspec:proposal Add profile search filters)
+
+AI:  I'll create an OpenSpec change proposal for profile filters.
+     *Scaffolds openspec/changes/add-profile-filters/ with proposal.md, tasks.md, spec deltas.*
+```
+
+#### 2. 验证和评审
+
+Check that the change was created correctly and review the proposal:
+
+```shell
+$ openspec list                             # Confirm the change folder exists
+$ openspec validate add-profile-filters     # Validate spec formatting
+$ openspec show add-profile-filters         # Review proposal, tasks, and spec delta
+```
+
+#### 3. Refine the Specs
+
+[](https://github.com/Fission-AI/OpenSpec?tab=readme-ov-file#3-refine-the-specs)
+
+Iterate on the specifications until they match your needs:
+
+```
+You: Can you add acceptance criteria for the role and team filters?
+
+AI:  I'll update the spec delta with scenarios for role and team filters.
+     *Edits openspec/changes/add-profile-filters/specs/profile/spec.md and tasks.md.*
+```
+
+#### 4. Implement the Change
+
+[](https://github.com/Fission-AI/OpenSpec?tab=readme-ov-file#4-implement-the-change)
+
+Once specs look good, start implementation:
+
+```
+You: The specs look good. Let's implement this change.
+     (Shortcut for tools with slash commands: /openspec:apply add-profile-filters)
+
+AI:  I'll work through the tasks in the add-profile-filters change.
+     *Implements tasks from openspec/changes/add-profile-filters/tasks.md*
+     *Marks tasks complete: Task 1.1 ✓, Task 1.2 ✓, Task 2.1 ✓...*
+```
+
+#### 5. Archive the Completed Change
+
+[](https://github.com/Fission-AI/OpenSpec?tab=readme-ov-file#5-archive-the-completed-change)
+
+After implementation is complete, archive the change:
+
+```
+AI:  All tasks are complete. The implementation is ready.
+
+You: Please archive the change
+     (Shortcut for tools with slash commands: /openspec:archive add-profile-filters)
+
+AI:  I'll archive the add-profile-filters change.
+    *Runs: openspec archive add-profile-filters --yes*
+     ✓ Change archived successfully. Specs updated. Ready for the next feature!
+```
+
+Or run the command yourself in terminal:
+
+```shell
+$ openspec archive add-profile-filters --yes  # Archive the completed change without prompts
+```
+
+**Note:** Tools with native slash commands (Claude Code, CodeBuddy, Cursor, Codex, Qoder, RooCode) can use the shortcuts shown. All other tools work with natural language requests to "create an OpenSpec proposal", "apply the OpenSpec change", or "archive the change".
 
 
 
